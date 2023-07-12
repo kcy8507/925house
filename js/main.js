@@ -19,10 +19,7 @@ $(document).ready(function () {
   })
     .setClassToggle(".about_ani", "about_ani-big")
     .setTween(tween1)
-    .addTo(controller)
-    .addIndicators({
-      name: "1",
-    });
+    .addTo(controller);
 })();
 
 //portfolio slide
@@ -62,13 +59,26 @@ floatingObject(".floating2", 0.5, 15);
 // floatingObject(".contactArrow", 0.5, 15);
 
 // introduce slider
-const left = $("#left-side");
-const handleOnMove = (e) => {
-  const p = (e.clientX / window.innerWidth) * 100;
-  left.css("width", `${p}%`);
-};
-$(document).on("mousemove", (e) => handleOnMove(e));
-$(document).on("touchmove", (e) => handleOnMove(e.touches[0]));
+// const left = $("#left-side");
+// const handleOnMove = (e) => {
+//   const p = (e.clientY / window.innerHeight) * 100;
+//   left.css("height", `${p}vh`);
+// };
+// $(document).on("mousemove", (e) => handleOnMove(e));
+// $(document).on("touchmove", (e) => handleOnMove(e.touches[0]));
+var controller = new ScrollMagic.Controller({
+  //   container: ".side", //body 스크롤이 아닌, 컨테이너 내부 스크롤 컨트롤
+});
+var tween1 = new TimelineMax();
+tween1.add(TweenMax.to("#left-side", 1, { opacity: 1, height: "0" })); //.add 로 지정된 메서드는 동시 모션 실행
+var scene1 = new ScrollMagic.Scene({
+  triggerElement: ".introduce",
+  triggerHook: "onLeave",
+  duration: "100%",
+})
+  .setPin(".introduce")
+  .setTween(tween1)
+  .addTo(controller);
 
 $(".contactBtn").hover(
   function () {
