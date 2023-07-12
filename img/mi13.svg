@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="157.093" height="157.093" viewBox="0 0 157.093 157.093">
+    <g data-name="그룹 364">
+        <g data-name="타원 355" transform="rotate(30 28.75 107.296)" style="stroke-width:6px;stroke-dasharray:15 10;stroke:#ffd754;fill:none">
+            <circle cx="57.5" cy="57.5" r="57.5" style="stroke:none"/>
+            <circle cx="57.5" cy="57.5" r="54.5" style="fill:none"/>
+        </g>
+        <g data-name="그룹 361">
+            <path data-name="선 4" transform="rotate(30 -54.397 198.781)" style="stroke-width:5px;stroke:#ffd754;fill:none" d="M0 0v55"/>
+            <path data-name="패스 43" d="M0 29.479 29 0l29 29.479" style="stroke-width:5px;stroke:#ffd754;fill:none" transform="rotate(30 -39.94 144.823)"/>
+        </g>
+    </g>
+</svg>

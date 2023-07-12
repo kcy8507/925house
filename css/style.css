@@ -651,6 +651,9 @@ a {
   margin-right: 24px;
 }
 
-.duck {
+.movingLetter {
   position: absolute;
+}
+.movingLetter img {
+  cursor: grab;
 }/*# sourceMappingURL=style.css.map */

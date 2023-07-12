@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160.569" height="160.013" viewBox="0 0 160.569 160.013">
+    <g data-name="그룹 359">
+        <g data-name="타원 354" style="stroke-width:6px;stroke:#ffbb54;fill:none" transform="rotate(-14.98 128.955 16.928)">
+            <ellipse cx="65.635" cy="65.242" rx="65.635" ry="65.242" style="stroke:none"/>
+            <ellipse cx="65.635" cy="65.242" rx="62.635" ry="62.242" style="fill:none"/>
+        </g>
+        <g data-name="그룹 358">
+            <path data-name="선 4" transform="rotate(120 24.206 76.869)" style="stroke-width:5px;stroke:#ffbb54;fill:none" d="M0 0v53.637"/>
+            <path data-name="패스 43" d="M0 28.4 28.4 0l28.4 28.4" transform="rotate(120 38.365 68.693)" style="stroke-width:5px;stroke:#ffbb54;fill:none"/>
+        </g>
+    </g>
+</svg>

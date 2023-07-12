@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101.025" height="101.025" viewBox="0 0 101.025 101.025">
+    <g data-name="그룹 360">
+        <g data-name="타원 350" style="stroke:#afafaf;stroke-width:6px;fill:none">
+            <circle cx="50.513" cy="50.513" r="50.513" style="stroke:none"/>
+            <circle cx="50.513" cy="50.513" r="47.513" style="fill:none"/>
+        </g>
+        <path data-name="선 5" transform="translate(30.308 29.465)" style="stroke-linecap:round;stroke:#afafaf;stroke-width:6px;fill:none" d="M39.568 0 0 40.41"/>
+        <path data-name="선 6" transform="rotate(90 20.407 50.039)" style="stroke-linecap:round;stroke:#afafaf;stroke-width:6px;fill:none" d="M40.08 0 0 40.08"/>
+    </g>
+</svg>
