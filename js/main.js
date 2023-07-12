@@ -72,13 +72,9 @@ $(document).on("touchmove", (e) => handleOnMove(e.touches[0]));
 
 $(".contactBtn").hover(
   function () {
-    //이부분은 마우스가 올라 요소 위에 올라왔을때 이벤트입니다.
-    // $(".contactUs").css({ display: "block" });
     $(".contactUs").slideDown();
   },
   function () {
-    //이부분은 마우스가 요소에서 나갈떄 실행할 수 있는 이벤트 입니다.
-    // $(".contactUs").css({ display: "none" });
     $(".contactUs").hide();
   }
 );

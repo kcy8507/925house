@@ -19,6 +19,7 @@ $main__font-color: #040404;
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 a {
   text-decoration: none;
@@ -552,6 +553,7 @@ a {
   min-height: 100vh;
   height: 100%;
   position: relative;
+  overflow: hidden;
   .inner {
     padding: 145px 30px;
   }
@@ -633,4 +635,7 @@ a {
     height: 81px;
     margin-right: 24px;
   }
+}
+.duck {
+  position: absolute;
 }
