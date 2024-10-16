@@ -1,13 +1,27 @@
 // 내용
-$(document).ready(function () {
-  $("a").smoothScroll();
-  $(".menu-open").on("click", function () {
-    $(".menu-lst").toggleClass("menuPop");
-  });
-  $(".menuCls").on("click", function () {
+// $(document).ready(function () {
+//   $("a").smoothScroll();
+//   $(".menu-open").on("click", function () {
+//     $(".menu-lst").toggleClass("menuPop");
+//   });
+//   $(".menuCls").on("click", function () {
+//     $(".menu-lst").removeClass("menuPop");
+//   });
+// });
+
+$(".menu").on("click", function (e) {
+  $(".menu").toggleClass("on");
+  if ($(".menu").hasClass("on") === true) {
+    $(".menu-lst").addClass("menuPop");
+    $(".menu-btn").css({ display: "none" });
+    $(".menu-lst").css({ display: "block" });
+  } else {
     $(".menu-lst").removeClass("menuPop");
-  });
+    $(".menu-btn").css({ display: "block" });
+    $(".menu-lst").css({ display: "none" });
+  }
 });
+
 // about ani
 (function () {
   var controller = new ScrollMagic.Controller({});
@@ -88,3 +102,8 @@ $(".contactBtn").hover(
     $(".contactUs").hide();
   }
 );
+
+gsap.registerPlugin(Draggable);
+Draggable.create(".movingletter", {
+  bounds: ".contact",
+});
