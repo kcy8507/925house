@@ -9,7 +9,7 @@
 //   });
 // });
 
-$(".menu").on("click", function (e) {
+$(".menu-open").on("click", function (e) {
   $(".menu").toggleClass("on");
   if ($(".menu").hasClass("on") === true) {
     $(".menu-lst").addClass("menuPop");
