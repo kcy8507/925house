@@ -1283,3 +1283,128 @@ a {
     background: #ff8737;
   }
 }
+#contactPage04 {
+  display: flex;
+  flex-direction: column;
+  .inner {
+    width: 100%;
+    padding: 171px 30px 125px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .contactPage_btn {
+    margin-top: 114px;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .prevbtn,
+  .nextbtn {
+    width: 139px;
+    height: 139px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid #707070;
+    background: none;
+  }
+  .contactPage04_text-container {
+    color: #040404;
+    font-size: 6.2rem;
+    line-height: 8.4rem;
+    font-weight: 700;
+  }
+  .contactPage04_container {
+    margin-top: 55px;
+  }
+}
+.contactPage04_container {
+  margin-top: 160px;
+}
+
+.contactPage04_date-box {
+}
+#contactPage05 {
+  display: flex;
+  flex-direction: column;
+  .inner {
+    padding: 171px 30px 125px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  .contactPage_btn {
+    margin-top: 114px;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .prevbtn,
+  .nextbtn {
+    width: 139px;
+    height: 139px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid #707070;
+    background: none;
+  }
+  .contactPage05_text-container {
+    color: #040404;
+    font-size: 6.7rem;
+    line-height: 8.4rem;
+    font-weight: 700;
+  }
+  .contactPage05_container {
+    margin-top: 55px;
+    max-width: 1000px;
+    width: 100%;
+    align-self: end;
+  }
+  .contactPage05_container-row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contactPage05_chk-box {
+  margin-top: 87px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"] + label {
+    border-radius: 71px;
+    border: 1px solid #707070;
+    background: white;
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+    display: inline-flex;
+    margin-right: 30px;
+    margin-bottom: 52px;
+    max-width: 294px;
+    width: 100%;
+    height: 119px;
+    align-items: center;
+    justify-content: center;
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+  input[type="checkbox"]:checked + label {
+    border: none;
+    color: white;
+    background: #ff8737;
+  }
+}
