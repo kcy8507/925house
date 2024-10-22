@@ -47,6 +47,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+input:focus {
+  outline: none;
+}
+
 .inner {
   /* 1920 - (140 * 2) = 1640px */
   /* -패딩값 30씩 */
@@ -1317,15 +1321,59 @@ a {
     line-height: 8.4rem;
     font-weight: 700;
   }
-  .contactPage04_container {
-    margin-top: 55px;
-  }
 }
 .contactPage04_container {
-  margin-top: 160px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-size: 7rem;
+    font-weight: 900;
+    color: #040404;
+  }
 }
 
 .contactPage04_date-box {
+  max-width: 631px;
+  width: 100%;
+  height: 90px;
+  border-radius: 73px;
+  border: 1px solid #707070;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #afafaf;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input[type="text"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    height: 100%;
+    vertical-align: center;
+    text-align: right;
+    padding: 0 10px;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #040404;
+  }
+  input#fromY,
+  input#toY {
+    width: 130px;
+    margin-right: 20px;
+  }
+  input#fromM,
+  input#toM {
+    width: 80px;
+    margin-right: 20px;
+  }
+  input#fromD,
+  input#toD {
+    width: 80px;
+  }
 }
 #contactPage05 {
   display: flex;
