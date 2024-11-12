@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from rest_framework.response import Response
-from rest_framework import generics, viewsets, filters
-from rest_framework.decorators import action
-from django.db.models import F, Value, Q
-from django.core.paginator import Paginator
+from rest_framework import generics, viewsets
+
+from mango.models import Request
+from mango.serializers import RequestSerializer
 
 
 def index(request):
@@ -29,3 +28,16 @@ def contact(request):
 
 def portfolio(request):
     return render(request, "portfolio.html")
+
+class RequestView(
+    generics.ListAPIView,
+    generics.RetrieveAPIView,
+    generics.CreateAPIView,
+    generics.UpdateAPIView,
+    viewsets.GenericViewSet,
+):
+    queryset = Request.objects.all()
+    serializer_class = RequestSerializer
+
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)

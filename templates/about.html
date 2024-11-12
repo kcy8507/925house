@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
   <meta property="twitter:url" content="URL" />
 
   <title>(주)망고소프트</title>
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" />
 
   <!-- css 파일 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -50,7 +51,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"
     integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q=="
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
 
   <!-- js 파일 -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -61,9 +62,9 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
-  <script defer="defer" src="js/loader.js"></script>
-  <script defer="defer" src="js/main.js"></script>
-  <script src="js/jquery.smooth-scroll.js"></script>
+  <script defer="defer" src="{% static "js/loader.js" %}"></script>
+  <script defer="defer" src="{% static "js/main.js" %}"></script>
+  <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
 
 
 </head>
@@ -73,12 +74,12 @@
 
   <div id="loader">
     <!-- <i class='bx bx-loader-circle bx-spin'></i> -->
-    <img src="img/loadingg.gif" alt="다음페이지">
+    <img src="{% static "img/loadingg.gif" %}" alt="다음페이지">
   </div>
   <section class="header">
     <div class="inner">
       <div class="header__wrap">
-        <a href="/index.html"><img class="logo" src="./img/logo.png" alt="로고"></a>
+        <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
         <div class="subpage-title">About</div>
         <div class="header__menu">
           <div class="menu-open">
@@ -87,13 +88,13 @@
             </div>
             <div class="menu-lst">
               <ul>
-                <a href="about.html">
+                <a href="/about">
                   <li>About</li>
                 </a>
-                <a href="portfolio.html">
+                <a href="/portfolio">
                   <li>Portfolio</li>
                 </a>
-                <a href="contact.html">
+                <a href="/contact">
                   <li>Contact</li>
                 </a>
               </ul>
@@ -122,19 +123,19 @@
       </div>
       <div class="about0__icon">
         <div class="box">
-          <img src="./img/about01icon1.png" alt="아이콘">
+          <img src="{% static "img/about01icon1.png" %}" alt="아이콘">
           <p>Discover</p>
           <p>고객이 알고 있는 것을 긴밀한 소통과 협력으로 알아내고
             그이상의 것을 제시합니다. 가치</p>
         </div>
         <div class="box">
-          <img src="./img/about01icon2.png" alt="아이콘">
+          <img src="{% static "img/about01icon2.png" %}" alt="아이콘">
           <p>Collaborate</p>
           <p>고객이 알고 있는 것을 긴밀한 소통과 협력으로 알아내고
             그이상의 것을 제시합니다. 가치</p>
         </div>
         <div class="box">
-          <img src="./img/about01icon3.png" alt="아이콘">
+          <img src="{% static "img/about01icon3.png" %}" alt="아이콘">
           <p>Create Value</p>
           <p>고객이 알고 있는 것을 긴밀한 소통과 협력으로 알아내고
             그이상의 것을 제시합니다. 가치</p>
@@ -155,22 +156,22 @@
       </div>
       <div class="about1__card">
         <div class="box">
-          <img src="./img/abouticon1.png" alt="아이콘">
+          <img src="{% static "img/abouticon1.png" %}" alt="아이콘">
           <p>UI/UX</p>
           <p>지속적인 연구를 통해 사용자 경험을 향상시키고 고객의 문제를 해결하는 혁신적인 서비스를 제공하고 있습니다.</p>
         </div>
         <div class="box">
-          <img src="./img/abouticon2.png" alt="아이콘">
+          <img src="{% static "img/abouticon2.png" %}" alt="아이콘">
           <p>Solution</p>
           <p>우리는 혁신적인 기술을 활용하여 문제에 집중하며 비즈니스 효율성을 높이고, 다양한 분야에 전문성을 가진 솔루션을 제공합니다.</p>
         </div>
         <div class="box">
-          <img src="./img/abouticon3.png" alt="아이콘">
+          <img src="{% static "img/abouticon3.png" %}" alt="아이콘">
           <p>Service</p>
           <p>혁신적인 웹디자인과 개발 서비스를 제공하며, 업무 생산성 향상을 위한 스마트 관리 솔루션을 개발하고 운영하고 있습니다.</p>
         </div>
         <div class="box">
-          <img src="./img/abouticon4.png" alt="아이콘">
+          <img src="{% static "img/abouticon4.png" %}" alt="아이콘">
           <p>Digital Marketing</p>
           <p>고객과 브랜드를 연결하는데 중점을 두고 철저히 분석하며, 감동과 공감을 주는 창의적인 컨텐츠를 통해 소통하는 마케팅을 추구합니다.</p>
         </div>
@@ -178,12 +179,12 @@
     </div>
   </section>
   <section class="about2">
-    <img src="./img/about2icon1.png" class="about2__icon1 about2icon" alt="동그라미">
-    <img src="./img/about2icon2.png" class="about2__icon2 about2icon" alt="동그라미">
-    <img src="./img/about2icon3.png" class="about2__icon3 about2icon" alt="동그라미">
-    <img src="./img/about2icon4.png" class="about2__icon4 about2icon" alt="동그라미">
-    <img src="./img/about2icon5.png" class="about2__icon5 about2icon" alt="동그라미">
-    <img src="./img/about2icon6.png" class="about2__icon6 about2icon" alt="동그라미">
+    <img src="{% static "img/about2icon1.png" %}" class="about2__icon1 about2icon" alt="동그라미">
+    <img src="{% static "img/about2icon2.png" %}" class="about2__icon2 about2icon" alt="동그라미">
+    <img src="{% static "img/about2icon3.png" %}" class="about2__icon3 about2icon" alt="동그라미">
+    <img src="{% static "img/about2icon4.png" %}" class="about2__icon4 about2icon" alt="동그라미">
+    <img src="{% static "img/about2icon5.png" %}" class="about2__icon5 about2icon" alt="동그라미">
+    <img src="{% static "img/about2icon6.png" %}" class="about2__icon6 about2icon" alt="동그라미">
     <div class="inner">
       <div class="about2__title">
         <p>
@@ -277,7 +278,7 @@
     <div class="inner">
       <div class="contact__title">
         Contact
-        <div class="contactBtn"><img src="./img/contactBtn.png" alt="문의하기">contact us</div>
+        <div class="contactBtn"><img src="{% static "img/contactBtn.png" %}" alt="문의하기">contact us</div>
       </div>
       <div class="contact__wrap">
         <div class="box">
@@ -313,25 +314,25 @@
     <div class="myCanvas" id="myCanvas"></div>
 
     <div class="movingLetter">
-      <img src="./img/mi01.svg" alt="" class="movingletter">
-      <img src="./img/mi02.svg" alt="" class="movingletter">
-      <img src="./img/mi03.svg" alt="" class="movingletter">
-      <img src="./img/mi04.svg" alt="" class="movingletter">
-      <img src="./img/mi05.svg" alt="" class="movingletter">
-      <img src="./img/mi06.svg" alt="" class="movingletter">
-      <img src="./img/mi07.svg" alt="" class="movingletter">
-      <img src="./img/mi08.svg" alt="" class="movingletter">
-      <img src="./img/mi09.svg" alt="" class="movingletter">
-      <img src="./img/mi10.svg" alt="" class="movingletter">
-      <img src="./img/mi11.svg" alt="" class="movingletter">
-      <img src="./img/mi12.svg" alt="" class="movingletter">
-      <img src="./img/mi13.svg" alt="" class="movingletter">
-      <img src="./img/mi14.svg" alt="" class="movingletter">
+      <img src="{% static "img/mi01.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi02.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi03.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi04.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi05.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi06.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi07.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi08.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi09.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi10.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi11.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi12.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi13.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi14.svg" %}" alt="" class="movingletter">
     </div>
   </section>
   <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
-  <!-- <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-  <script language="javascript" type="text/javascript" src="sketch_240924c.js"></script> -->
+  <!-- <script language="javascript" type="text/javascript" src="{% static "libraries/p5.min.js" %}"></script>
+  <script language="javascript" type="text/javascript" src="{% static "sketch_240924c.js" %}"></script> -->
   <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
   <!-- matter -->

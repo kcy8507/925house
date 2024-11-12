@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
   <meta property="twitter:url" content="URL" />
 
   <title>(주)망고소프트</title>
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" />
 
   <!-- css 파일 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -50,7 +51,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"
     integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q=="
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
 
   <!-- js 파일 -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -61,9 +62,9 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
-  <script defer="defer" src="js/loader.js"></script>
-  <script defer="defer" src="js/main.js"></script>
-  <script src="js/jquery.smooth-scroll.js"></script>
+  <script defer="defer" src="{% static "js/loader.js" %}"></script>
+  <script defer="defer" src="{% static "js/main.js" %}"></script>
+  <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
 
 
 </head>
@@ -73,13 +74,13 @@
 
   <div id="loader">
     <!-- <i class='bx bx-loader-circle bx-spin'></i> -->
-    <img src="img/loadingg.gif" alt="다음페이지">
+    <img src="{% static "img/loadingg.gif" %}" alt="다음페이지">
   </div>
 
   <section class="header">
     <div class="inner">
       <div class="header__wrap">
-        <a href="/index.html"><img class="logo" src="./img/logo.png" alt="로고"></a>
+        <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
         <div class="header__menu">
           <div class="menu-open">
             <div class="menu-btn">
@@ -87,13 +88,13 @@
             </div>
             <div class="menu-lst">
               <ul>
-                <a href="about.html">
+                <a href="/about">
                   <li>About</li>
                 </a>
-                <a href="portfolio.html">
+                <a href="/portfolio">
                   <li>Portfolio</li>
                 </a>
-                <a href="contact.html">
+                <a href="/contact">
                   <li>Contact</li>
                 </a>
               </ul>
@@ -133,19 +134,19 @@
       <div class="about__wrap">
         <a class="box" href="/">
           <p>WEB/APP</p>
-          <img src="./img/arrow.png" alt="바로가기">
+          <img src="{% static "img/arrow.png" %}" alt="바로가기">
         </a>
         <a class="box" href="/">
           <p>BRANDING</p>
-          <img src="./img/arrow.png" alt="바로가기">
+          <img src="{% static "img/arrow.png" %}" alt="바로가기">
         </a>
         <a class="box" href="/">
           <p>FILM</p>
-          <img src="./img/arrow.png" alt="바로가기">
+          <img src="{% static "img/arrow.png" %}" alt="바로가기">
         </a>
         <a class="box" href="/">
           <p>PRINT</p>
-          <img src="./img/arrow.png" alt="바로가기">
+          <img src="{% static "img/arrow.png" %}" alt="바로가기">
         </a>
       </div>
     </div>
@@ -164,47 +165,47 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
             <div class="swiper-slide">
-              <img src="./img/main-slide01.png" alt="">
+              <img src="{% static "img/main-slide01.png" %}" alt="">
               <p>여수시 관광협의회</p>
               <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
             </div>
@@ -212,8 +213,8 @@
 
           <!-- If we need navigation buttons -->
           <div class="swiper-button-adjustment">
-            <img class="swiper-button-prev" src="./img/prev.png" alt="이전">
-            <img class="swiper-button-next" src="./img/next.png" alt="다음">
+            <img class="swiper-button-prev" src="{% static "img/prev.png" %}" alt="이전">
+            <img class="swiper-button-next" src="{% static "img/next.png" %}" alt="다음">
           </div>
         </div>
       </div>
@@ -244,7 +245,7 @@
     <div class="inner">
       <div class="contact__title">
         Contact
-        <div class="contactBtn"><img src="./img/contactBtn.png" alt="문의하기">contact us</div>
+        <div class="contactBtn"><img src="{% static "img/contactBtn.png" %}" alt="문의하기">contact us</div>
       </div>
       <div class="contact__wrap">
         <div class="box">
@@ -280,20 +281,20 @@
     <div class="myCanvas" id="myCanvas"></div>
 
     <div class="movingLetter">
-      <img src="./img/mi01.svg" alt="" class="movingletter">
-      <img src="./img/mi02.svg" alt="" class="movingletter">
-      <img src="./img/mi03.svg" alt="" class="movingletter">
-      <img src="./img/mi04.svg" alt="" class="movingletter">
-      <img src="./img/mi05.svg" alt="" class="movingletter">
-      <img src="./img/mi06.svg" alt="" class="movingletter">
-      <img src="./img/mi07.svg" alt="" class="movingletter">
-      <img src="./img/mi08.svg" alt="" class="movingletter">
-      <img src="./img/mi09.svg" alt="" class="movingletter">
-      <img src="./img/mi10.svg" alt="" class="movingletter">
-      <img src="./img/mi11.svg" alt="" class="movingletter">
-      <img src="./img/mi12.svg" alt="" class="movingletter">
-      <img src="./img/mi13.svg" alt="" class="movingletter">
-      <img src="./img/mi14.svg" alt="" class="movingletter">
+      <img src="{% static "img/mi01.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi02.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi03.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi04.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi05.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi06.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi07.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi08.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi09.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi10.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi11.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi12.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi13.svg" %}" alt="" class="movingletter">
+      <img src="{% static "img/mi14.svg" %}" alt="" class="movingletter">
     </div>
   </section>
   <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
