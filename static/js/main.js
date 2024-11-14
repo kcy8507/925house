@@ -49,6 +49,16 @@ const swiper = new Swiper(".swiper", {
   },
   scrollbars: false,
   slideToClickedSlide: true,
+  breakpoints: {
+    993: {
+      slidesPerView: "1.8",
+      spaceBetween: 27,
+    },
+    0: {
+      slidesPerView: "1.3",
+      spaceBetween: 10,
+    },
+  },
 });
 
 // 범위 랜덤 함수(소수점 2자리까지)
