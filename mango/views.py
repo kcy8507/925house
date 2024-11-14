@@ -29,13 +29,7 @@ def contact(request):
 def portfolio(request):
     return render(request, "portfolio.html")
 
-class RequestView(
-    generics.ListAPIView,
-    generics.RetrieveAPIView,
-    generics.CreateAPIView,
-    generics.UpdateAPIView,
-    viewsets.GenericViewSet,
-):
+class RequestView(viewsets.ModelViewSet):
     queryset = Request.objects.all()
     serializer_class = RequestSerializer
 

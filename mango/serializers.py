@@ -32,7 +32,7 @@ class RequestSerializer(serializers.ModelSerializer):
             mail = file.read()
         title = '[망고소프트] 홈페이지 연락'
         html_content = mail
-        mail_msg = EmailMultiAlternatives(subject=title, to=[validated_data['email']], body='홈페이지에서 의뢰함.', from_email='hyunga127@gmail.com')
+        mail_msg = EmailMultiAlternatives(subject=title, to=['hyunga127@gmail.com'], body='홈페이지에서 의뢰함.')
         mail_msg.attach_alternative(html_content, "text/html")
         mail_msg.send()
         return super().create(validated_data)

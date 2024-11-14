@@ -262,7 +262,7 @@
           </div>
           <div class="contactPage_btn">
             <button class="prevbtn" style="visibility: hidden;"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn"><img src="{% static "img/FINbtn.png" %}" alt="끝"></button>
+            <button class="nextbtn" onclick="window.location.href='/portfolio'"><img src="{% static "img/FINbtn.png" %}" alt="끝"></button>
           </div>
         </div>
       </section>
@@ -522,7 +522,6 @@
             .getElementById('contactPage06')
             .style
             .display = 'none';
-          subscription();
           document
             .getElementById('contactPage07')
             .style
@@ -544,17 +543,21 @@
           var toDate = `${toY.padStart(4, '20')}-${toM.padStart(2, '0')}-${toD.padStart(2, '0')}`;
 
           const formData = new FormData();
-          console.log(selectedService)
-          formData.append("service", selectedService);
+          selectedService.forEach(function(service) {
+            formData.append("service", service);
+          });
+          // formData.append("service", selectedService);
           formData.append("company_name", company);
           formData.append("manager_name", contactName);
           formData.append("phone", contactTel);
           formData.append("email", contactE);
-          formData.append("request", selectedRequest);
+          selectedRequest.forEach(function(request) {
+            formData.append("request", request);
+          });
+          // formData.append("request", selectedRequest);
           formData.append("started", fromDate);
           formData.append("ended", toDate);
           formData.append("budget", selectedBudget[0]);
-          console.log(formData);
           try {
             let res = await axios({
               url: `${location.origin}/request/`,
@@ -566,8 +569,8 @@
               },
               data: formData
             });
-            alert("문의 감사합니다.\n확인 후 답변드리겠습니다.");
-            window.location.href = "/contact";
+            // alert("문의 감사합니다.\n확인 후 답변드리겠습니다.");
+            // window.location.href = "/contact";
           } catch (e) {
             let res_data = e.response.data
 
