@@ -1740,6 +1740,13 @@ input:focus {
   .main__slide {
     margin-top: 335px;
   }
+  .swiper-slide-active {
+    width: auto !important;
+    height: auto;
+  }
+  .swiper-slide-active img {
+    height: 258px;
+  }
   .about .inner {
     padding: 130px 55px;
   }
@@ -1776,21 +1783,29 @@ input:focus {
     left: 61%;
     bottom: 25%;
   }
+  .project {
+    min-height: auto;
+  }
   .sub-title {
-    bottom: 103px;
     font-size: 18px;
     text-align: right;
     line-height: 32px;
-    max-width: 669px;
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 0 55px 59px;
+    right: inherit;
   }
   .introduce .title {
     font-size: 5.4rem;
-    padding: 113px 0 0 55px;
+    padding: 113px 55px 0 55px;
     max-width: 820px;
+    width: 100%;
   }
   #right-side .title {
-    padding: 113px 0 0 55px;
+    padding: 113px 55px 0 55px;
     max-width: 820px;
+    width: 100%;
   }
   .side {
     background-size: 200%;
@@ -2125,6 +2140,12 @@ input:focus {
   .project__wrap {
     margin-top: 32px;
   }
+  .swiper-slide img {
+    height: 161px;
+  }
+  .swiper-slide-active img {
+    height: 210px;
+  }
   .swiper-slide-active {
     width: 301px !important;
     height: 288px;
@@ -2154,13 +2175,10 @@ input:focus {
     bottom: 22%;
   }
   .sub-title {
-    position: relative;
-    bottom: 0;
     font-size: 14px;
     text-align: right;
     line-height: 24px;
     max-width: 100%;
-    right: inherit;
     padding: 0 20px 59px;
   }
   .introduce .title {
