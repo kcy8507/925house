@@ -31,7 +31,6 @@ window.onload = () => {
     let imgW;
     if (innerWidth <= "576") {
       imgStack = [0, 0];
-      console.log(innerContainerWidth);
       colWidth = innerContainerWidth / 2;
       imgW = innerContainerWidth / 2;
       let cards = document.querySelectorAll(".card-wrapper");
@@ -55,10 +54,9 @@ window.onload = () => {
       //     cards[i].style.maxWidth = `${imgW}px`;
       //   });
     } else {
-      imgStack = [0, 0, 0];
-      colWidth = innerContainerWidth / 3;
-      imgW = innerContainerWidth / 3;
-      console.log(innerContainerWidth);
+      imgStack = [0, 0];
+      colWidth = innerContainerWidth / 2;
+      imgW = innerContainerWidth / 2;
       let cards = document.querySelectorAll(".card-wrapper");
       cards.forEach((card, i) => {
         cards[i].style.maxWidth = `${imgW}px`;
@@ -111,7 +109,7 @@ window.onload = () => {
     // apply(null, imgStack)도 상관X
     let x = colWidth * minIndex;
     let y = imgStack[minIndex];
-    imgStack[minIndex] += websiteImages[i].children[0].firstElementChild.height + 100;
+    imgStack[minIndex] += websiteImages[i].children[0].firstElementChild.height + 20;
     // 이미지 높이에+20
     websiteImages[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
     // 그냥 애니메이션
@@ -128,7 +126,7 @@ window.onload = () => {
       // apply(null, imgStack)도 상관X
       let x = colWidth * minIndex;
       let y = imgStack[minIndex];
-      imgStack[minIndex] += websiteImages[i].children[0].firstElementChild.height + 100;
+      imgStack[minIndex] += websiteImages[i].children[0].firstElementChild.height + 20;
       // 이미지 높이에+20
       websiteImages[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
       // 그냥 애니메이션
@@ -146,7 +144,7 @@ window.onload = () => {
       // apply(null, imgStack)도 상관X
       let x = colWidth * minIndex;
       let y = imgStack[minIndex];
-      imgStack[minIndex] += brandingImages[i].children[0].height + 100;
+      imgStack[minIndex] += brandingImages[i].children[0].height + 20;
       // 이미지 높이에+20
       brandingImages[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
       // 그냥 애니메이션
@@ -164,7 +162,7 @@ window.onload = () => {
       // apply(null, imgStack)도 상관X
       let x = colWidth * minIndex;
       let y = imgStack[minIndex];
-      imgStack[minIndex] += videoImages[i].children[0].firstElementChild.height + 100;
+      imgStack[minIndex] += videoImages[i].children[0].firstElementChild.height + 20;
       // 이미지 높이에+20
       videoImages[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
       // 그냥 애니메이션
@@ -181,7 +179,7 @@ window.onload = () => {
       // apply(null, imgStack)도 상관X
       let x = colWidth * minIndex;
       let y = imgStack[minIndex];
-      imgStack[minIndex] += appImages[i].children[0].height + 100;
+      imgStack[minIndex] += appImages[i].children[0].height + 20;
       // 이미지 높이에+20
       appImages[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
       // 그냥 애니메이션
@@ -198,7 +196,7 @@ window.onload = () => {
       // apply(null, imgStack)도 상관X
       let x = colWidth * minIndex;
       let y = imgStack[minIndex];
-      imgStack[minIndex] += catalogImages[i].children[0].height + 100;
+      imgStack[minIndex] += catalogImages[i].children[0].height + 20;
       // 이미지 높이에+20
       catalogImages[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
       // 그냥 애니메이션

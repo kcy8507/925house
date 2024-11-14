@@ -2,385 +2,259 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="description" content="(주)망고소프트" />
-  <meta http-equiv="imagetoolbar" content="no">
-  <meta http-equiv="Cache-Control" content="No-Cache">
-  <meta http-equiv="Pragma" content="No-Cache">
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="title" content="(주)망고소프트" />
-  <meta name="keywords" content="(주)망고소프트" />
-  <meta name="robots" content="index, follow" />
-  <meta name="description" content="(주)망고소프트" />
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="(주)망고소프트"/>
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="title" content="(주)망고소프트"/>
+    <meta name="keywords" content="(주)망고소프트"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="description" content="(주)망고소프트"/>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="(주)망고소프트" />
-  <meta property="og:title" content="(주)망고소프트" />
-  <meta property="og:description" content="(주)망고소프트" />
-  <meta property="og:image" content="img/" />
-  <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="(주)망고소프트"/>
+    <meta property="og:title" content="(주)망고소프트"/>
+    <meta property="og:description" content="(주)망고소프트"/>
+    <meta property="og:image" content="img/"/>
+    <meta property="og:url" content="URL"/>
 
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:site" content="(주)망고소프트" />
-  <meta property="twitter:title" content="(주)망고소프트" />
-  <meta property="twitter:description" content="(주)망고소프트" />
-  <meta property="twitter:image" content="img/" />
-  <meta property="twitter:url" content="URL" />
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="(주)망고소프트"/>
+    <meta property="twitter:title" content="(주)망고소프트"/>
+    <meta property="twitter:description" content="(주)망고소프트"/>
+    <meta property="twitter:image" content="img/"/>
+    <meta property="twitter:url" content="URL"/>
 
-  <title>(주)망고소프트</title>
-  <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" />
+    <title>(주)망고소프트</title>
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}"/>
 
-  <!-- css 파일 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- css 파일 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"
-    integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q=="
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
 
-  <!-- js 파일 -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <!-- js 파일 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
-  <script defer="defer" src="{% static "js/loader.js" %}"></script>
-  <script defer="defer" src="{% static "js/main.js" %}"></script>
-  <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
+    <script defer="defer" src="{% static "js/loader.js" %}"></script>
+    <script defer="defer" src="{% static "js/main.js" %}"></script>
+    <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
 
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <div id="loader">
+      <!-- <i class='bx bx-loader-circle bx-spin'></i> -->
+      <img src="{% static "img/loadingg.gif" %}" alt="다음페이지">
+    </div>
 
-
-  <div id="loader">
-    <!-- <i class='bx bx-loader-circle bx-spin'></i> -->
-    <img src="{% static "img/loadingg.gif" %}" alt="다음페이지">
-  </div>
-
-  <section class="header">
-    <div class="inner">
-      <div class="header__wrap">
-        <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
-        <div class="header__menu">
-          <div class="menu-open">
-            <div class="menu-btn">
-              Menu
-            </div>
-            <div class="menu-lst">
-              <ul>
-                <a href="/about">
-                  <li>About</li>
-                </a>
-                <a href="/portfolio">
-                  <li>Portfolio</li>
-                </a>
-                <a href="/contact">
-                  <li>Contact</li>
-                </a>
-              </ul>
-            </div>
-            <div class="menu">
-              <svg xmlns="http://www.w3.org/2000/svg" width="26.964" height="8.566" viewBox="0 0 26.964 8.566">
-                <g data-name="그룹 3">
-                  <path class="line1" data-name="선 1" transform="translate(0 1)"
-                    style="fill:none;stroke:#434343;stroke-width:2px" d="M0 0h20.957" />
-                  <path class="line2" data-name="선 2" transform="translate(8.625 7.566)"
-                    style="fill:none;stroke:#434343;stroke-width:2px" d="M0 0h18.338" />
-                </g>
-              </svg>
+    <section class="header">
+      <div class="inner">
+        <div class="header__wrap">
+          <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
+          <div class="header__menu">
+            <div class="menu-open">
+              <div class="menu-btn">
+                Menu
+              </div>
+              <div class="menu-lst">
+                <ul>
+                  <a href="/about">
+                    <li>About</li>
+                  </a>
+                  <a href="/portfolio">
+                    <li>Portfolio</li>
+                  </a>
+                  <a href="/contact">
+                    <li>Contact</li>
+                  </a>
+                </ul>
+              </div>
+              <div class="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26.964" height="8.566" viewbox="0 0 26.964 8.566">
+                  <g data-name="그룹 3">
+                    <path class="line1" data-name="선 1" transform="translate(0 1)" style="fill:none;stroke:#434343;stroke-width:2px" d="M0 0h20.957"/>
+                    <path class="line2" data-name="선 2" transform="translate(8.625 7.566)" style="fill:none;stroke:#434343;stroke-width:2px" d="M0 0h18.338"/>
+                  </g>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-  </section>
-  <section class="main">
-    <div class="main__title">
-      <p>감각적이고 의미 있는 디지털 세상을 만듭니다.</p>
-      <p>
-        안녕하세요. 우리는 망고소프트입니다. 혁신적인 아이디어와 열정으로 당신의 성공을 위해 함께합니다!
-      </p>
-    </div>
-    <div class="main__slide">
-      <div class="main01"></div>
-      <div class="main02"></div>
-    </div>
-  </section>
-  <section class="about" id="about">
-    <div class="about_ani" id="animate1"></div>
-    <div class="inner">
-      <div class="about__title">
-        ABOUT US
-      </div>
-      <div class="about__wrap">
-        <a class="box" href="/">
-          <p>WEB/APP</p>
-          <img src="{% static "img/arrow.png" %}" alt="바로가기">
-        </a>
-        <a class="box" href="/">
-          <p>BRANDING</p>
-          <img src="{% static "img/arrow.png" %}" alt="바로가기">
-        </a>
-        <a class="box" href="/">
-          <p>FILM</p>
-          <img src="{% static "img/arrow.png" %}" alt="바로가기">
-        </a>
-        <a class="box" href="/">
-          <p>PRINT</p>
-          <img src="{% static "img/arrow.png" %}" alt="바로가기">
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="project" id="portfolio">
-    <div class="floating1"></div>
-    <div class="floating2"></div>
-    <div class="inner">
-      <div class="project__title">
-        MANGO PROJECT
-      </div>
-      <div class="project__wrap">
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
-            <div class="swiper-slide">
-              <img src="{% static "img/main-slide01.png" %}" alt="">
-              <p>여수시 관광협의회</p>
-              <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
-            </div>
+      </section>
+      <section class="main">
+        <div class="main__title">
+          <p>감각적이고 의미 있는 디지털 세상을 만듭니다.</p>
+          <p>
+            안녕하세요. 우리는 망고소프트입니다. 혁신적인 아이디어와 열정으로 당신의 성공을 위해 함께합니다!
+          </p>
+        </div>
+        <div class="main__slide">
+          <div class="main01"></div>
+          <div class="main02"></div>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="about_ani" id="animate1"></div>
+        <div class="inner">
+          <div class="about__title">
+            ABOUT US
           </div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-adjustment">
-            <img class="swiper-button-prev" src="{% static "img/prev.png" %}" alt="이전">
-            <img class="swiper-button-next" src="{% static "img/next.png" %}" alt="다음">
+          <div class="about__wrap">
+            <a class="box" href="/">
+              <p>WEB/APP</p>
+              <img src="{% static "img/arrow.png" %}" alt="바로가기">
+            </a>
+            <a class="box" href="/">
+              <p>BRANDING</p>
+              <img src="{% static "img/arrow.png" %}" alt="바로가기">
+            </a>
+            <a class="box" href="/">
+              <p>FILM</p>
+              <img src="{% static "img/arrow.png" %}" alt="바로가기">
+            </a>
+            <a class="box" href="/">
+              <p>PRINT</p>
+              <img src="{% static "img/arrow.png" %}" alt="바로가기">
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-    <p class="sub-title">창의적이고 혁신적인 디자인으로 고객의 비즈니스에 독특한 아이덴티티를 부여합니다.
-      <br>사용자 경험과 시각적인 효과에 중점을 두어 최고 수준의 웹디자인을 제공하며 고객의
-      목표와 요구사항을 이해하고, 그에 맞게 맞춤형 디자인
-      솔루션을 제공합니다.
-    </p>
-  </section>
-  <section class="introduce">
-    <div id="left-side" class="side">
-      <h2 class="title">
-        우리는 기술과 아름다움이 조화를 이룬 웹 경험을 통해<br>
-        고객의 <span class="fancy">비즈니스를 성장</span>시키고,<br>
-        새로운 <span class="fancy">비즈니스 세상을 열어갑니다.</span>
-      </h2>
-    </div>
-    <div id="right-side" class="side">
-      <h2 class="title">
-        우리는 기술과 아름다움이 조화를 이룬 웹 경험을 통해<br>
-        고객의 <span class="fancy">비즈니스를 성장</span>시키고,<br>
-        새로운 <span class="fancy">창의적인 세상을 열어갑니다.</span>
-      </h2>
-    </div>
-  </section>
-  <section class="contact" id="contact">
-    <div class="inner">
-      <div class="contact__title">
-        Contact
-        <div class="contactBtn"><img src="{% static "img/contactBtn.png" %}" alt="문의하기">contact us</div>
-      </div>
-      <div class="contact__wrap">
-        <div class="box">
-          <p>E-mail</p>
-          <p>ㄴ> mangosoftdesign@gmail.com</p>
+      </section>
+      <section class="project">
+        <div class="floating1"></div>
+        <div class="floating2"></div>
+        <div class="inner">
+          <div class="project__title">
+            MANGO PROJECT
+          </div>
+          <div class="project__wrap">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="{% static "img/main-slide01.png" %}" alt="">
+                  <p>여수돌산갓</p>
+                  <p>#웹디자인 #반응형웹 #인터페이스 구축 #DB구축</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="{% static "img/main-slide02.png" %}" alt="">
+                  <p>여수지역사회연구소</p>
+                  <p>#웹디자인 #반응형웹 #인터페이스 구축</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="{% static "img/main-slide03.png" %}" alt="">
+                  <p>캄플로우</p>
+                  <p>#웹디자인 #반응형웹</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="{% static "img/main-slide04.png" %}" alt="">
+                  <p>꼭대기연탄</p>
+                  <p>#웹디자인 #반응형웹</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="{% static "img/main-slide04.png" %}" alt="">
+                  <p>꼭대기연탄</p>
+                  <p>#웹디자인 #반응형웹</p>
+                </div>
+              </div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-adjustment">
+                <img class="swiper-button-prev" src="{% static "img/prev.png" %}" alt="이전">
+                <img class="swiper-button-next" src="{% static "img/next.png" %}" alt="다음">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="box">
-          <p>Call</p>
-          <p>ㄴ> 010 - 2608 - 0217</p>
+        <p class="sub-title">창의적이고 혁신적인 디자인으로 고객의 비즈니스에 독특한 아이덴티티를 부여합니다.
+          <br>사용자 경험과 시각적인 효과에 중점을 두어 최고 수준의 웹디자인을 제공하며 고객의 목표와 요구사항을 이해하고, 그에 맞게 맞춤형 디자인 솔루션을 제공합니다.
+        </p>
+      </section>
+      <section class="introduce">
+        <div id="left-side" class="side">
+          <h2 class="title">
+            우리는 기술과 아름다움이 조화를 이룬 웹 경험을 통해<br>
+            고객의
+            <span class="fancy">비즈니스를 성장</span>시키고,<br>
+            새로운
+            <span class="fancy">비즈니스 세상을 열어갑니다.</span>
+          </h2>
         </div>
-        <div class="box">
-          <p>Adress</p>
-          <p>ㄴ> 전라남도 여수시 덕충 3길 3, 2층 망고소프트</p>
+        <div id="right-side" class="side">
+          <h2 class="title">
+            우리는 기술과 아름다움이 조화를 이룬 웹 경험을 통해<br>
+            고객의
+            <span class="fancy">비즈니스를 성장</span>시키고,<br>
+            새로운
+            <span class="fancy">창의적인 세상을 열어갑니다.</span>
+          </h2>
         </div>
-      </div>
-    </div>
-    <div class="contactUs">
-      <div class="contactHIdden">
-        <p>망고소프트와 함께하고 싶으시다면
-          프로젝트를 의뢰해보세요!</p>
-        <svg class="contactArrow" xmlns="http://www.w3.org/2000/svg" width="511.768" height="140.594"
-          viewBox="0 0 511.768 140.594">
-          <g data-name="그룹 367">
-            <path data-name="패스 44"
-              d="M0 0s26.354 45.353 96.058 59.46c44.35 8.976 105.364 2.931 109.617-12.252C213 20.561 61.293 54.85 172.487 93.345s324.106-35.231 324.106-35.231"
-              transform="rotate(-4 503.931 4.739)" style="fill:none;stroke:#ff8737;stroke-width:2px" />
-            <path data-name="패스 45" d="M-.854 14.2 21.04-4.3l12.644 22.858" transform="rotate(44.03 184.802 620.023)"
-              style="fill:none;stroke:#ff8737;stroke-width:2px" />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div class="myCanvas" id="myCanvas"></div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="inner">
+          <div class="contact__title">
+            Contact
+            <div class="contactBtn">
+              <a href="/contact"><img src="{% static "img/contactBtn.png" %}" alt="문의하기">contact us</a>
+            </div>
+          </div>
+          <div class="contact__wrap">
+            <div class="box">
+              <p>E-mail</p>
+              <p>ㄴ> mangosoftdesign@gmail.com</p>
+            </div>
+            <div class="box">
+              <p>Call</p>
+              <p>ㄴ> 010 - 2608 - 0217</p>
+            </div>
+            <div class="box">
+              <p>Adress</p>
+              <p>ㄴ> 전라남도 여수시 덕충 3길 3, 2층 망고소프트</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactUs">
+          <div class="contactHIdden">
+            <p>망고소프트와 함께하고 싶으시다면 프로젝트를 의뢰해보세요!</p>
+            <svg class="contactArrow" xmlns="http://www.w3.org/2000/svg" width="511.768" height="140.594" viewbox="0 0 511.768 140.594">
+              <g data-name="그룹 367">
+                <path data-name="패스 44" d="M0 0s26.354 45.353 96.058 59.46c44.35 8.976 105.364 2.931 109.617-12.252C213 20.561 61.293 54.85 172.487 93.345s324.106-35.231 324.106-35.231" transform="rotate(-4 503.931 4.739)" style="fill:none;stroke:#ff8737;stroke-width:2px"/>
+                <path data-name="패스 45" d="M-.854 14.2 21.04-4.3l12.644 22.858" transform="rotate(44.03 184.802 620.023)" style="fill:none;stroke:#ff8737;stroke-width:2px"/>
+              </g>
+            </svg>
+          </div>
 
-    <div class="movingLetter">
-      <img src="{% static "img/mi01.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi02.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi03.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi04.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi05.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi06.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi07.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi08.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi09.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi10.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi11.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi12.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi13.svg" %}" alt="" class="movingletter">
-      <img src="{% static "img/mi14.svg" %}" alt="" class="movingletter">
-    </div>
-  </section>
-  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
-  <!-- <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-  <script language="javascript" type="text/javascript" src="sketch_240924c.js"></script> -->
-  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+        </div>
+      </section>
+      <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+      <!-- <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script> <script language="javascript" type="text/javascript" src="sketch_240924c.js"></script> -->
+      <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
-  <!-- matter -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
-  <script>
-    const Engine = Matter.Engine;
-    const World = Matter.World;
-    const Bodies = Matter.Bodies;
-    const Body = Matter.Body;
+      <!-- matter -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+      <script></script>
+    </body>
 
-    let engine;
-    let words = [];
-    let ground, wallLeft, wallRight;
-    // let wordsToDisplay = [];
-    let wordsToDisplay = [...document.querySelectorAll('.movingletter')];
-
-    function setup() {
-      let canvas = createCanvas(windowWidth, windowHeight);
-      canvas.parent("myCanvas");
-
-      engine = Engine.create();
-
-      ground = Bodies.rectangle(width / 2, height - 20, width, 10, {
-        isStatic: true,
-      });
-      wallLeft = Bodies.rectangle(0, height / 2, 10, height, {
-        isStatic: true,
-      });
-      wallRight = Bodies.rectangle(width, height / 2, 10, height, {
-        isStatic: true,
-      });
-
-      World.add(engine.world, [ground, wallLeft, wallRight]);
-
-      for (let i = 0; i < wordsToDisplay.length; i++) {
-        words.push(new Word(random(width), -200, wordsToDisplay[i]))
-      }
-    };
-    function draw() {
-      Engine.update(engine);
-      for (let word of words) {
-        word.show()
-      }
-    }
-    console.log(word)
-    class Word {
-      constructor(x, y, word) {
-        this.body = Bodies.rectangle(x, y, word.length * 20, 40)
-        this.word = word;
-        World.add(engine.world, this.body);
-      }
-      show() {
-        let pos = this.body.position;
-        let angle = this.body.angle;
-
-        push();
-        translate(pos.x, pos.y);
-        rotate(angle);
-        rectMode(CENTER);
-        fill(255);
-        stroke("#ff8737");
-        strokeWeight(5);
-        rect(0, 0, this.word.length * 80 + 100, 150, 100);
-        noStroke();
-        fill("#ff8737");
-        pop();
-      }
-    }
-    function mouseMoved() {
-      for (let word of words) {
-        if (dist(mouseX, mouseY, word.body.position.x, word.body.position.y) < 50) {
-          Body.applyForce(
-            word.body,
-            { x: word.body.position.x, y: word.body.position.y },
-            { x: random(-0.1, 0.1), y: random(-0.1, 0.1) }
-          )
-        }
-      }
-    }
-  </script>
-</body>
-
-</html>
+  </html>

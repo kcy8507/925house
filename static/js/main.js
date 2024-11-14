@@ -107,3 +107,17 @@ gsap.registerPlugin(Draggable);
 Draggable.create(".movingletter", {
   bounds: ".contact",
 });
+
+// about 페이지 스크롤 애니메이션
+//$(function () {
+// var controller = new ScrollMagic.Controller({
+//    globalSceneOptions: {
+//     triggerHook: "onLeave",
+//   duration: "100%",
+//   },
+// });
+// var slides = document.querySelectorAll("section.panel");
+// for (var i = 0; i < slides.length; i++) {
+//   new ScrollMagic.Scene({ triggerElement: slides[i] }).setPin(slides[i], { pushfollowers: false }).addIndicators().addTo(controller);
+// }
+//});
