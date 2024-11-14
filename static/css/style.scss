@@ -382,6 +382,7 @@ input:focus {
   min-height: 100vh;
   height: 100%;
   position: relative;
+  overflow: hidden;
   .inner {
     padding: 158px 30px;
   }
