@@ -3,12 +3,6 @@ window.onload = () => {
   let websiteHeight = document.querySelector(".menu-website");
   let brandingImages = document.querySelectorAll(".menu-branding>.card-wrapper");
   let brandingHeight = document.querySelector(".menu-branding");
-  let videoImages = document.querySelectorAll(".menu-video>.card-wrapper");
-  let videoHeight = document.querySelector(".menu-video");
-  let appImages = document.querySelectorAll(".menu-app>.card-wrapper");
-  let appHeight = document.querySelector(".menu-app");
-  let catalogImages = document.querySelectorAll(".menu-catalog>.card-wrapper");
-  let catalogHeight = document.querySelector(".menu-catalog");
   let tabEls = document.querySelectorAll(".menu-section-wrap [data-index]");
   let tabEl = [...tabEls];
   let menuEls = document.querySelectorAll(".portfolio-menu li");

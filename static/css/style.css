@@ -639,6 +639,10 @@ input:focus {
   line-height: 2.8rem;
 }
 
+.contact.bg-lazy {
+  background-image: none;
+}
+
 .contactHIdden {
   display: flex;
   flex-direction: column;
