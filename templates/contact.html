@@ -6,31 +6,31 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="(주)망고소프트"/>
+    <meta name="description" content="925house"/>
     <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="No-Cache">
     <meta http-equiv="Pragma" content="No-Cache">
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="title" content="(주)망고소프트"/>
-    <meta name="keywords" content="(주)망고소프트"/>
+    <meta name="title" content="925house"/>
+    <meta name="keywords" content="925house"/>
     <meta name="robots" content="index, follow"/>
-    <meta name="description" content="(주)망고소프트"/>
+    <meta name="description" content="925house"/>
 
     <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="(주)망고소프트"/>
-    <meta property="og:title" content="(주)망고소프트"/>
-    <meta property="og:description" content="(주)망고소프트"/>
+    <meta property="og:site_name" content="925house"/>
+    <meta property="og:title" content="925house"/>
+    <meta property="og:description" content="925house"/>
     <meta property="og:image" content="img/"/>
     <meta property="og:url" content="URL"/>
 
     <meta property="twitter:card" content="summary"/>
-    <meta property="twitter:site" content="(주)망고소프트"/>
-    <meta property="twitter:title" content="(주)망고소프트"/>
-    <meta property="twitter:description" content="(주)망고소프트"/>
+    <meta property="twitter:site" content="925house"/>
+    <meta property="twitter:title" content="925house"/>
+    <meta property="twitter:description" content="925house"/>
     <meta property="twitter:image" content="img/"/>
     <meta property="twitter:url" content="URL"/>
 
-    <title>(주)망고소프트</title>
+    <title>925house</title>
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}"/>
 
     <!-- css 파일 -->
@@ -71,517 +71,500 @@
       <div class="inner">
         <div class="header__wrap">
           <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
-          <div class="subpage-title subpage-title_con">Contact</div>
-          <div class="header__menu">
-            <div class="menu-open">
-              <div class="menu-btn">
-                Menu
-              </div>
-              <div class="menu-lst">
-                <ul>
-                  <a href="/about">
-                    <li>About</li>
-                  </a>
-                  <a href="/portfolio">
-                    <li>Portfolio</li>
-                  </a>
-                  <a href="/contact">
-                    <li>Contact</li>
-                  </a>
-                </ul>
-              </div>
-              <div class="menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26.964" height="8.566" viewbox="0 0 26.964 8.566">
-                  <g data-name="그룹 3">
-                    <path class="line1" data-name="선 1" transform="translate(0 1)" style="fill:none;stroke:#434343;stroke-width:2px" d="M0 0h20.957"/>
-                    <path class="line2" data-name="선 2" transform="translate(8.625 7.566)" style="fill:none;stroke:#434343;stroke-width:2px" d="M0 0h18.338"/>
-                  </g>
-                </svg>
-              </div>
+          <ul class="menu">
+            <li>
+              <a href="/about">ABOUT</a>
+            </li>
+            <li>
+              <a href="/portfolio">PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="/contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contactPage01">
+      <div class="inner">
+        <div class="contactPage01_text-container">만나서 반가워요.<br>
+          어떤 업무로 오셨나요?</div>
+        <div class="contactPage01_container">
+          <p class="contactPage01_subtitle">필요하신 서비스를 모두 선택해 주세요</p>
+          <div class="contactPage01_chk-box">
+            <input type="checkbox" name="service" id="web" value="0">
+            <label for="web">웹사이트</label>
+            <input type="checkbox" name="service" id="app" value="1">
+            <label for="app">앱개발</label>
+            <input type="checkbox" name="service" id="bibx" value="2">
+            <label for="bibx">BI/BX</label>
+            <input type="checkbox" name="service" id="makt" value="3">
+            <label for="makt">마케팅</label>
+            <input type="checkbox" name="service" id="mt" value="4">
+            <label for="mt">유지보수</label>
+            <input type="checkbox" name="service" id="film" value="5">
+            <label for="film">영상제작</label>
+            <input type="checkbox" name="service" id="cat" value="6">
+            <label for="cat">카탈로그</label>
+            <input type="checkbox" name="service" id="consult" value="7">
+            <label for="consult">컨설팅</label>
+            <input type="checkbox" name="service" id="inter" value="8">
+            <label for="inter">인터뷰요청</label>
+            <input type="checkbox" name="service" id="etc" value="9">
+            <label for="etc">기타문의</label>
+          </div>
+        </div>
+        <div class="contactPage_btn">
+          <button class="prevbtn" style="visibility: hidden;"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
+          <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+        </div>
+      </div>
+    </section>
+    <section id="contactPage02">
+      <div class="inner">
+        <div class="contactPage02_container-row">
+          <div class="contactPage02_text-container">의뢰자님의<br>
+            정보가 필요해요 🐥</div>
+          <div class="contactPage02_container">
+            <div class="contactPage02_chk-box">
+              <input type="text" name="company" id="company" placeholder="회사명" oninput="allowOnlyWords(this)">
+              <input type="text" name="contactName" id="contactName" placeholder="담당자명" oninput="allowOnlyWords(this)">
+              <input type="text" name="contactTel" id="contactTel" placeholder="연락처" oninput="allowOnlyNumbers(this)" maxlength="11">
+              <input type="text" name="contactE" id="contactE" placeholder="이메일">
             </div>
           </div>
         </div>
-      </section>
-      <section id="contactPage01">
-        <div class="inner">
-          <div class="contactPage01_text-container">만나서 반가워요.<br>
-            어떤 업무로 오셨나요?🐣</div>
-          <div class="contactPage01_container">
-            <p class="contactPage01_subtitle">필요하신 서비스를 모두 선택해 주세요</p>
-            <div class="contactPage01_chk-box">
-              <input type="checkbox" name="service" id="web" value="0">
-              <label for="web">웹사이트</label>
-              <input type="checkbox" name="service" id="app" value="1">
-              <label for="app">앱개발</label>
-              <input type="checkbox" name="service" id="bibx" value="2">
-              <label for="bibx">BI/BX</label>
-              <input type="checkbox" name="service" id="makt" value="3">
-              <label for="makt">마케팅</label>
-              <input type="checkbox" name="service" id="mt" value="4">
-              <label for="mt">유지보수</label>
-              <input type="checkbox" name="service" id="film" value="5">
-              <label for="film">영상제작</label>
-              <input type="checkbox" name="service" id="cat" value="6">
-              <label for="cat">카탈로그</label>
-              <input type="checkbox" name="service" id="consult" value="7">
-              <label for="consult">컨설팅</label>
-              <input type="checkbox" name="service" id="inter" value="8">
-              <label for="inter">인터뷰요청</label>
-              <input type="checkbox" name="service" id="etc" value="9">
-              <label for="etc">기타문의</label>
-            </div>
-          </div>
-          <div class="contactPage_btn">
-            <button class="prevbtn" style="visibility: hidden;"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+        <div class="contactPage_btn">
+          <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
+          <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+        </div>
+      </div>
+    </section>
+    <section id="contactPage03">
+      <div class="inner">
+        <div class="contactPage03_text-container">어떤 부분을<br>
+          의뢰하시는건가요?🐣</div>
+        <div class="contactPage03_container">
+          <p class="contactPage03_subtitle">중복 선택 가능합니다.</p>
+          <div class="contactPage03_chk-box">
+            <input type="checkbox" name="request" id="build" value="0">
+            <label for="build">신규 구축</label>
+            <input type="checkbox" name="request" id="renewbuild" value="1">
+            <label for="renewbuild">개선 구축</label>
+            <input type="checkbox" name="request" id="consulting" value="2">
+            <label for="consulting">컨설팅</label>
+            <input type="checkbox" name="request" id="mtn" value="3">
+            <label for="mtn">유지보수</label>
+            <input type="checkbox" name="request" id="etcc" value="4">
+            <label for="etcc">기타</label>
           </div>
         </div>
-      </section>
-      <section id="contactPage02">
-        <div class="inner">
-          <div class="contactPage02_container-row">
-            <div class="contactPage02_text-container">의뢰자님의<br>
-              정보가 필요해요 🐥</div>
-            <div class="contactPage02_container">
-              <div class="contactPage02_chk-box">
-                <input type="text" name="company" id="company" placeholder="회사명" oninput="allowOnlyWords(this)">
-                <input type="text" name="contactName" id="contactName" placeholder="담당자명" oninput="allowOnlyWords(this)">
-                <input type="text" name="contactTel" id="contactTel" placeholder="연락처" oninput="allowOnlyNumbers(this)" maxlength="11">
-                <input type="text" name="contactE" id="contactE" placeholder="이메일">
-              </div>
-            </div>
+        <div class="contactPage_btn">
+          <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
+          <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+        </div>
+      </div>
+    </section>
+    <section id="contactPage04">
+      <div class="inner">
+        <div class="contactPage04_text-container">프로젝트의 예상일정을<br>
+          입력해 주세요 📆</div>
+        <div class="contactPage04_container">
+          <div class="contactPage04_date-box">
+            <input type="text" id="fromY" name="fromY" oninput="allowOnlyNumbers(this)" maxlength="4">
+            <label for="fromY">년</label>
+            <input type="text" id="fromM" name="fromM" oninput="allowOnlyNumbers(this)" maxlength="2">
+            <label for="fromM">월</label>
+            <input type="text" id="fromD" name="fromD" oninput="allowOnlyNumbers(this)" maxlength="2">
+            <label for="fromD">일</label>
           </div>
-          <div class="contactPage_btn">
-            <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+          <p>~</p>
+          <div class="contactPage04_date-box">
+            <input type="text" id="toY" name="toY" oninput="allowOnlyNumbers(this)" maxlength="4">
+            <label for="toY">년</label>
+            <input type="text" id="toM" name="toM" oninput="allowOnlyNumbers(this)" maxlength="2">
+            <label for="toM">월</label>
+            <input type="text" id="toD" name="toD" oninput="allowOnlyNumbers(this)" maxlength="2">
+            <label for="toD">일</label>
           </div>
         </div>
-      </section>
-      <section id="contactPage03">
-        <div class="inner">
-          <div class="contactPage03_text-container">어떤 부분을<br>
-            의뢰하시는건가요?🐣</div>
-          <div class="contactPage03_container">
-            <p class="contactPage03_subtitle">중복 선택 가능합니다.</p>
-            <div class="contactPage03_chk-box">
-              <input type="checkbox" name="request" id="build" value="0">
-              <label for="build">신규 구축</label>
-              <input type="checkbox" name="request" id="renewbuild" value="1">
-              <label for="renewbuild">개선 구축</label>
-              <input type="checkbox" name="request" id="consulting" value="2">
-              <label for="consulting">컨설팅</label>
-              <input type="checkbox" name="request" id="mtn" value="3">
-              <label for="mtn">유지보수</label>
-              <input type="checkbox" name="request" id="etcc" value="4">
-              <label for="etcc">기타</label>
-            </div>
+        <div class="contactPage_btn">
+          <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
+          <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+        </div>
+      </div>
+    </section>
+    <section id="contactPage05">
+      <div class="inner">
+        <div class="contactPage05_container-row">
+          <div class="contactPage05_text-container">대략적인 예산이
+            <br>
+            궁금해요 !
           </div>
-          <div class="contactPage_btn">
-            <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+          <div class="contactPage05_container">
+            <div class="contactPage05_chk-box">
+              <input type="checkbox" name="budget" id="1000" value="1천 미만">
+              <label for="1000">1천 미만</label>
+              <input type="checkbox" name="budget" id="1500" value="1~5천">
+              <label for="1500">1~5천</label>
+              <input type="checkbox" name="budget" id="5000" value="5천~1억">
+              <label for="5000">5천~1억</label>
+              <input type="checkbox" name="budget" id="10000" value="1~2억">
+              <label for="10000">1~2억</label>
+              <input type="checkbox" name="budget" id="20000" value="2~3억">
+              <label for="20000">2~3억</label>
+              <input type="checkbox" name="budget" id="30000" value="3억 이상">
+              <label for="30000">3억 이상</label>
+            </div>
           </div>
         </div>
-      </section>
-      <section id="contactPage04">
-        <div class="inner">
-          <div class="contactPage04_text-container">프로젝트의 예상일정을<br>
-            입력해 주세요 📆</div>
-          <div class="contactPage04_container">
-            <div class="contactPage04_date-box">
-              <input type="text" id="fromY" name="fromY" oninput="allowOnlyNumbers(this)" maxlength="4">
-              <label for="fromY">년</label>
-              <input type="text" id="fromM" name="fromM" oninput="allowOnlyNumbers(this)" maxlength="2">
-              <label for="fromM">월</label>
-              <input type="text" id="fromD" name="fromD" oninput="allowOnlyNumbers(this)" maxlength="2">
-              <label for="fromD">일</label>
-            </div>
-            <p>~</p>
-            <div class="contactPage04_date-box">
-              <input type="text" id="toY" name="toY" oninput="allowOnlyNumbers(this)" maxlength="4">
-              <label for="toY">년</label>
-              <input type="text" id="toM" name="toM" oninput="allowOnlyNumbers(this)" maxlength="2">
-              <label for="toM">월</label>
-              <input type="text" id="toD" name="toD" oninput="allowOnlyNumbers(this)" maxlength="2">
-              <label for="toD">일</label>
-            </div>
-          </div>
-          <div class="contactPage_btn">
-            <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+        <div class="contactPage_btn">
+          <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
+          <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
+        </div>
+      </div>
+    </section>
+    <section id="contactPage06">
+      <div class="inner">
+        <div class="contactPage06_container-row">
+          <div class="contactPage06_text-container">
+            <input type="checkbox" class="ui-checkbox" id="agreeChek">
+            <p>개인정보 보호정책에 동의합니다.</p>
           </div>
         </div>
-      </section>
-      <section id="contactPage05">
-        <div class="inner">
-          <div class="contactPage05_container-row">
-            <div class="contactPage05_text-container">대략적인 예산이
-              <br>
-              궁금해요 !
-            </div>
-            <div class="contactPage05_container">
-              <div class="contactPage05_chk-box">
-                <input type="checkbox" name="budget" id="1000" value="1천 미만">
-                <label for="1000">1천 미만</label>
-                <input type="checkbox" name="budget" id="1500" value="1~5천">
-                <label for="1500">1~5천</label>
-                <input type="checkbox" name="budget" id="5000" value="5천~1억">
-                <label for="5000">5천~1억</label>
-                <input type="checkbox" name="budget" id="10000" value="1~2억">
-                <label for="10000">1~2억</label>
-                <input type="checkbox" name="budget" id="20000" value="2~3억">
-                <label for="20000">2~3억</label>
-                <input type="checkbox" name="budget" id="30000" value="3억 이상">
-                <label for="30000">3억 이상</label>
-              </div>
-            </div>
-          </div>
-          <div class="contactPage_btn">
-            <button class="prevbtn"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
-          </div>
+        <div class="contactPage_btn">
+          <button class="prevbtn" style="visibility: hidden;"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
+          <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
         </div>
-      </section>
-      <section id="contactPage06">
-        <div class="inner">
-          <div class="contactPage06_container-row">
-            <div class="contactPage06_text-container">
-              <input type="checkbox" class="ui-checkbox" id="agreeChek">
-              <p>개인정보 보호정책에 동의합니다.</p>
-            </div>
-          </div>
-          <div class="contactPage_btn">
-            <button class="prevbtn" style="visibility: hidden;"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn"><img src="{% static "img/contactnext.png" %}" alt="다음"></button>
-          </div>
+      </div>
+    </section>
+    <section id="contactPage07">
+      <div class="inner">
+        <div class="contactPage07_text-container">의뢰주셔서 감사합니다.
+          <br>검토후 연락 드리겠습니다 :)
         </div>
-      </section>
-      <section id="contactPage07">
-        <div class="inner">
-          <div class="contactPage07_text-container">의뢰주셔서 감사합니다.
-            <br>검토후 연락 드리겠습니다 :)
-          </div>
-          <div class="contactPage_btn">
-            <button class="prevbtn" style="visibility: hidden;"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
-            <button class="nextbtn" onclick="window.location.href='/portfolio'"><img src="{% static "img/FINbtn.png" %}" alt="끝"></button>
-          </div>
+        <div class="contactPage_btn">
+          <button class="prevbtn" style="visibility: hidden;"><img src="{% static "img/contactprev.png" %}" alt="이전"></button>
+          <button class="nextbtn" onclick="window.location.href='/portfolio'"><img src="{% static "img/FINbtn.png" %}" alt="끝"></button>
         </div>
-      </section>
-      <!-- matter -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script>
-        function allowOnlyWords(input) {
+      </div>
+    </section>
+    <!-- matter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function allowOnlyWords(input) {
+        input.value = input
+          .value
+          .replace(/[^\wㄱ-ㅎ|ㅏ-ㅣ|가-힣|ᆞ|ᆢ|ㆍ|ᆢ|ᄀᆞ|ᄂᆞ|ᄃᆞ|ᄅᆞ|ᄆᆞ|ᄇᆞ|ᄉᆞ|ᄋᆞ|ᄌᆞ|ᄎᆞ|ᄏᆞ|ᄐᆞ|ᄑᆞ|ᄒᆞ]/gi, '')
+      }
+
+      function autoHypenPhone(input) {
+        value = input
+          .value
+          .replace(/[^0-9]/g, '');
+        var newValue = '';
+        if (value.length < 5) {
+          newValue = value;
+        } else if (value.length < 7) {
+          newValue += value.substr(0, 4);
+          newValue += '-';
+          newValue += value.substr(4);
+        } else {
+          newValue += value.substr(0, 4);
+          newValue += '-';
+          newValue += value.substr(4, 2);
+          newValue += '-';
+          newValue += value.substr(6);
+        }
+        input.value = newValue;
+      };
+
+      function allowOnlyNumbers(input) {
+        const numberRegex = /^[0-9]*$/;
+        if (!numberRegex.test(input.value)) {
           input.value = input
             .value
-            .replace(/[^\wㄱ-ㅎ|ㅏ-ㅣ|가-힣|ᆞ|ᆢ|ㆍ|ᆢ|ᄀᆞ|ᄂᆞ|ᄃᆞ|ᄅᆞ|ᄆᆞ|ᄇᆞ|ᄉᆞ|ᄋᆞ|ᄌᆞ|ᄎᆞ|ᄏᆞ|ᄐᆞ|ᄑᆞ|ᄒᆞ]/gi, '')
-        }
-
-        function autoHypenPhone(input) {
-          value = input
-            .value
-            .replace(/[^0-9]/g, '');
-          var newValue = '';
-          if (value.length < 5) {
-            newValue = value;
-          } else if (value.length < 7) {
-            newValue += value.substr(0, 4);
-            newValue += '-';
-            newValue += value.substr(4);
-          } else {
-            newValue += value.substr(0, 4);
-            newValue += '-';
-            newValue += value.substr(4, 2);
-            newValue += '-';
-            newValue += value.substr(6);
-          }
-          input.value = newValue;
+            .replace(/[^0-9]/g, '')
         };
+      }
 
-        function allowOnlyNumbers(input) {
-          const numberRegex = /^[0-9]*$/;
-          if (!numberRegex.test(input.value)) {
-            input.value = input
-              .value
-              .replace(/[^0-9]/g, '')
-          };
+      const prevbtn = document.getElementsByClassName('prevbtn');
+      prevbtn[1].addEventListener('click', function () {
+        document
+          .getElementById('contactPage01')
+          .style
+          .display = 'flex';
+        document
+          .getElementById('contactPage02')
+          .style
+          .display = 'none';
+      });
+
+      prevbtn[2].addEventListener('click', function () {
+        document
+          .getElementById('contactPage02')
+          .style
+          .display = 'flex';
+        document
+          .getElementById('contactPage03')
+          .style
+          .display = 'none';
+      });
+
+      prevbtn[3].addEventListener('click', function () {
+        document
+          .getElementById('contactPage03')
+          .style
+          .display = 'flex';
+        document
+          .getElementById('contactPage04')
+          .style
+          .display = 'none';
+      });
+
+      prevbtn[4].addEventListener('click', function () {
+        document
+          .getElementById('contactPage04')
+          .style
+          .display = 'flex';
+        document
+          .getElementById('contactPage05')
+          .style
+          .display = 'none';
+      });
+      prevbtn[5].addEventListener('click', function () {
+        document
+          .getElementById('contactPage05')
+          .style
+          .display = 'flex';
+        document
+          .getElementById('contactPage06')
+          .style
+          .display = 'none';
+      });
+
+      // 변수 초기화
+      const nextBtn = document.getElementsByClassName('nextbtn');
+      var service;
+      var selectedService = [];
+      var company;
+      var contactName;
+      var contactTel;
+      var contactE;
+      var request;
+      var selectedRequest = [];
+      var fromY,
+        fromM,
+        fromD,
+        toY,
+        toM,
+        toD;
+      var budget;
+      var selectedBudget = [];
+
+      nextBtn[0].addEventListener('click', function () {
+        service = document.getElementsByName("service");
+        selectedService = [];
+        service.forEach(checkbox => {
+          if (checkbox.checked) {
+            selectedService.push(checkbox.value);
+          }
+        });
+        if (selectedService.length === 0) {
+          alert("하나 이상의 옵션을 선택해 주세요.");
+          return;
         }
+        document
+          .getElementById('contactPage01')
+          .style
+          .display = 'none';
+        document
+          .getElementById('contactPage02')
+          .style
+          .display = 'flex';
+      });
 
-        const prevbtn = document.getElementsByClassName('prevbtn');
-        prevbtn[1].addEventListener('click', function () {
-          document
-            .getElementById('contactPage01')
-            .style
-            .display = 'flex';
-          document
-            .getElementById('contactPage02')
-            .style
-            .display = 'none';
+      nextBtn[1].addEventListener('click', function () {
+        company = document
+          .getElementById("company")
+          .value;
+        contactName = document
+          .getElementById("contactName")
+          .value;
+        contactTel = document
+          .getElementById("contactTel")
+          .value;
+        contactE = document
+          .getElementById("contactE")
+          .value;
+        if (!(company || contactName || contactTel || contactE)) {
+          alert("하나 이상의 정보를 입력해 주세요.");
+          return;
+        }
+        document
+          .getElementById('contactPage02')
+          .style
+          .display = 'none';
+        document
+          .getElementById('contactPage03')
+          .style
+          .display = 'flex';
+      });
+
+      nextBtn[2].addEventListener('click', function () {
+        request = document.getElementsByName("request");
+        selectedRequest = [];
+        request.forEach(checkbox => {
+          if (checkbox.checked) {
+            selectedRequest.push(checkbox.value);
+          }
         });
+        if (selectedRequest.length === 0) {
+          alert("하나 이상의 옵션을 선택해 주세요.");
+          return;
+        }
+        document
+          .getElementById('contactPage03')
+          .style
+          .display = 'none';
+        document
+          .getElementById('contactPage04')
+          .style
+          .display = 'flex';
+      });
 
-        prevbtn[2].addEventListener('click', function () {
-          document
-            .getElementById('contactPage02')
-            .style
-            .display = 'flex';
-          document
-            .getElementById('contactPage03')
-            .style
-            .display = 'none';
+      nextBtn[3].addEventListener('click', function () {
+        fromY = document
+          .getElementById("fromY")
+          .value;
+        fromM = document
+          .getElementById("fromM")
+          .value;
+        fromD = document
+          .getElementById("fromD")
+          .value;
+        toY = document
+          .getElementById("toY")
+          .value;
+        toM = document
+          .getElementById("toM")
+          .value;
+        toD = document
+          .getElementById("toD")
+          .value;
+        if (!((fromY && fromM && fromD) || (toY && toM && toD))) {
+          alert("날짜를 입력해 주세요.");
+          return;
+        }
+        document
+          .getElementById('contactPage04')
+          .style
+          .display = 'none';
+        document
+          .getElementById('contactPage05')
+          .style
+          .display = 'flex';
+      });
+
+      nextBtn[4].addEventListener('click', function () {
+        budget = document.getElementsByName("budget");
+        selectedBudget = [];
+        budget.forEach(checkbox => {
+          if (checkbox.checked) {
+            selectedBudget.push(checkbox.value);
+          }
         });
+        if (selectedBudget.length === 0) {
+          alert("하나의 옵션을 선택해 주세요.");
+          return;
+        }
+        if (selectedBudget.length != 1) {
+          alert("하나의 옵션만 선택해 주세요.");
+          return;
+        }
+        document
+          .getElementById('contactPage05')
+          .style
+          .display = 'none';
+        subscription();
+        document
+          .getElementById('contactPage06')
+          .style
+          .display = 'flex';
+      });
 
-        prevbtn[3].addEventListener('click', function () {
-          document
-            .getElementById('contactPage03')
-            .style
-            .display = 'flex';
-          document
-            .getElementById('contactPage04')
-            .style
-            .display = 'none';
+      nextBtn[5].addEventListener('click', function () {
+        agreeChek = document.getElementById("agreeChek");
+        if (!agreeChek.checked) {
+          alert("개인정보 보호정책에 동의해주세요.");
+          return
+        }
+        document
+          .getElementById('contactPage06')
+          .style
+          .display = 'none';
+        document
+          .getElementById('contactPage07')
+          .style
+          .display = 'flex';
+      });
+
+      const subscription = async () => {
+        if (!(`${fromY}${fromM}${fromD}`)) {
+          fromY = "2024";
+          fromM = "01";
+          fromD = "01";
+        }
+        if (!(`${toY}${toM}${toD}`)) {
+          toY = "2030";
+          toM = "12";
+          toD = "31";
+        }
+        var fromDate = `${fromY.padStart(4, '20')}-${fromM.padStart(2, '0')}-${fromD.padStart(2, '0')}`;
+        var toDate = `${toY.padStart(4, '20')}-${toM.padStart(2, '0')}-${toD.padStart(2, '0')}`;
+
+        const formData = new FormData();
+        selectedService.forEach(function (service) {
+          formData.append("service", service);
         });
-
-        prevbtn[4].addEventListener('click', function () {
-          document
-            .getElementById('contactPage04')
-            .style
-            .display = 'flex';
-          document
-            .getElementById('contactPage05')
-            .style
-            .display = 'none';
+        // formData.append("service", selectedService);
+        formData.append("company_name", company);
+        formData.append("manager_name", contactName);
+        formData.append("phone", contactTel);
+        formData.append("email", contactE);
+        selectedRequest.forEach(function (request) {
+          formData.append("request", request);
         });
-        prevbtn[5].addEventListener('click', function () {
-          document
-            .getElementById('contactPage05')
-            .style
-            .display = 'flex';
-          document
-            .getElementById('contactPage06')
-            .style
-            .display = 'none';
-        });
-
-        // 변수 초기화
-        const nextBtn = document.getElementsByClassName('nextbtn');
-        var service;
-        var selectedService = [];
-        var company;
-        var contactName;
-        var contactTel;
-        var contactE;
-        var request;
-        var selectedRequest = [];
-        var fromY,
-          fromM,
-          fromD,
-          toY,
-          toM,
-          toD;
-        var budget;
-        var selectedBudget = [];
-
-        nextBtn[0].addEventListener('click', function () {
-          service = document.getElementsByName("service");
-          selectedService = [];
-          service.forEach(checkbox => {
-            if (checkbox.checked) {
-              selectedService.push(checkbox.value);
-            }
+        // formData.append("request", selectedRequest);
+        formData.append("started", fromDate);
+        formData.append("ended", toDate);
+        formData.append("budget", selectedBudget[0]);
+        try {
+          let res = await axios({
+            url: `${location.origin}/request/`,
+            method: "POST",
+            headers: {
+              "X-CSRFToken": "{{csrf_token}}",
+              "Accept": "application/json",
+              "Content-Type": "multipart/form-data"
+            },
+            data: formData
           });
-          if (selectedService.length === 0) {
-            alert("하나 이상의 옵션을 선택해 주세요.");
-            return;
-          }
-          document
-            .getElementById('contactPage01')
-            .style
-            .display = 'none';
-          document
-            .getElementById('contactPage02')
-            .style
-            .display = 'flex';
-        });
+          // alert("문의 감사합니다.\n확인 후 답변드리겠습니다.");
+          // window.location.href = "/contact";
+        } catch (e) {
+          let res_data = e.response.data
 
-        nextBtn[1].addEventListener('click', function () {
-          company = document
-            .getElementById("company")
-            .value;
-          contactName = document
-            .getElementById("contactName")
-            .value;
-          contactTel = document
-            .getElementById("contactTel")
-            .value;
-          contactE = document
-            .getElementById("contactE")
-            .value;
-          if (!(company || contactName || contactTel || contactE)) {
-            alert("하나 이상의 정보를 입력해 주세요.");
-            return;
-          }
-          document
-            .getElementById('contactPage02')
-            .style
-            .display = 'none';
-          document
-            .getElementById('contactPage03')
-            .style
-            .display = 'flex';
-        });
-
-        nextBtn[2].addEventListener('click', function () {
-          request = document.getElementsByName("request");
-          selectedRequest = [];
-          request.forEach(checkbox => {
-            if (checkbox.checked) {
-              selectedRequest.push(checkbox.value);
-            }
-          });
-          if (selectedRequest.length === 0) {
-            alert("하나 이상의 옵션을 선택해 주세요.");
-            return;
-          }
-          document
-            .getElementById('contactPage03')
-            .style
-            .display = 'none';
-          document
-            .getElementById('contactPage04')
-            .style
-            .display = 'flex';
-        });
-
-        nextBtn[3].addEventListener('click', function () {
-          fromY = document
-            .getElementById("fromY")
-            .value;
-          fromM = document
-            .getElementById("fromM")
-            .value;
-          fromD = document
-            .getElementById("fromD")
-            .value;
-          toY = document
-            .getElementById("toY")
-            .value;
-          toM = document
-            .getElementById("toM")
-            .value;
-          toD = document
-            .getElementById("toD")
-            .value;
-          if (!((fromY && fromM && fromD) || (toY && toM && toD))) {
-            alert("날짜를 입력해 주세요.");
-            return;
-          }
-          document
-            .getElementById('contactPage04')
-            .style
-            .display = 'none';
-          document
-            .getElementById('contactPage05')
-            .style
-            .display = 'flex';
-        });
-
-        nextBtn[4].addEventListener('click', function () {
-          budget = document.getElementsByName("budget");
-          selectedBudget = [];
-          budget.forEach(checkbox => {
-            if (checkbox.checked) {
-              selectedBudget.push(checkbox.value);
-            }
-          });
-          if (selectedBudget.length === 0) {
-            alert("하나의 옵션을 선택해 주세요.");
-            return;
-          }
-          if (selectedBudget.length != 1) {
-            alert("하나의 옵션만 선택해 주세요.");
-            return;
-          }
-          document
-            .getElementById('contactPage05')
-            .style
-            .display = 'none';
-          subscription();
-          document
-            .getElementById('contactPage06')
-            .style
-            .display = 'flex';
-        });
-
-        nextBtn[5].addEventListener('click', function () {
-          agreeChek = document.getElementById("agreeChek");
-          if (!agreeChek.checked) {
-            alert("개인정보 보호정책에 동의해주세요.");
+          if (res_data["non_field_errors"]) {
+            alert(res_data["non_field_errors"][0])
             return
-          }
-          document
-            .getElementById('contactPage06')
-            .style
-            .display = 'none';
-          document
-            .getElementById('contactPage07')
-            .style
-            .display = 'flex';
-        });
-
-        const subscription = async () => {
-          if (!(`${fromY}${fromM}${fromD}`)) {
-            fromY = "2024";
-            fromM = "01";
-            fromD = "01";
-          }
-          if (!(`${toY}${toM}${toD}`)) {
-            toY = "2030";
-            toM = "12";
-            toD = "31";
-          }
-          var fromDate = `${fromY.padStart(4, '20')}-${fromM.padStart(2, '0')}-${fromD.padStart(2, '0')}`;
-          var toDate = `${toY.padStart(4, '20')}-${toM.padStart(2, '0')}-${toD.padStart(2, '0')}`;
-
-          const formData = new FormData();
-          selectedService.forEach(function(service) {
-            formData.append("service", service);
-          });
-          // formData.append("service", selectedService);
-          formData.append("company_name", company);
-          formData.append("manager_name", contactName);
-          formData.append("phone", contactTel);
-          formData.append("email", contactE);
-          selectedRequest.forEach(function(request) {
-            formData.append("request", request);
-          });
-          // formData.append("request", selectedRequest);
-          formData.append("started", fromDate);
-          formData.append("ended", toDate);
-          formData.append("budget", selectedBudget[0]);
-          try {
-            let res = await axios({
-              url: `${location.origin}/request/`,
-              method: "POST",
-              headers: {
-                "X-CSRFToken": "{{csrf_token}}",
-                "Accept": "application/json",
-                "Content-Type": "multipart/form-data"
-              },
-              data: formData
-            });
-            // alert("문의 감사합니다.\n확인 후 답변드리겠습니다.");
-            // window.location.href = "/contact";
-          } catch (e) {
-            let res_data = e.response.data
-
-            if (res_data["non_field_errors"]) {
-              alert(res_data["non_field_errors"][0])
-              return
-            };
           };
-          // window.location.reload();
         };
-      </script>
-    </body>
+        // window.location.reload();
+      };
+    </script>
+  </body>
 
-  </html>
+</html>
