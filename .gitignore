@@ -1,3 +1,4 @@
 nmvenv
 __pycache__
 migrations
+.env
