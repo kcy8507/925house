@@ -2,6 +2,7 @@
 @import "reset.css";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
 @import url("https://fonts.cdnfonts.com/css/silk-display");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 
 /*
 extraLight 200
@@ -303,21 +304,15 @@ input:focus {
   height: 100vh;
   padding: 100px 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  p {
-    -webkit-text-stroke: 1px black;
-    color: transparent;
+  align-items: center;
+  justify-content: flex-end;
 
+  p {
     text-align: right;
     font-size: 130px;
     font-weight: 700;
-    margin-top: 26px;
-    // &:last-child {
-    //   font-size: 16px;
-    //   font-family: $main__font-family;
-    //   font-weight: 400;
-    // }
+    margin-right: -100px;
+    z-index: 0;
   }
   .about-big-icon {
     width: 400px;
@@ -327,40 +322,60 @@ input:focus {
   }
   span {
     width: 100%;
-    font-size: 30px;
     display: flex;
     justify-content: flex-end;
     font-weight: 600;
-    position: absolute;
-    bottom: 170px;
-    right: 400px;
+    font-size: 30px;
+    margin-top: 30px;
+    padding-right: 30px;
   }
   .about_webimg {
-    width: 500px;
-    height: 700px;
+    width: 800px;
+    height: auto;
     object-fit: cover;
     border-radius: 25px;
   }
+  &:nth-child(2n) {
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    p {
+      text-align: left;
+      margin-right: 0;
+      margin-left: -100px;
+    }
+    span {
+      padding-right: 0;
+      padding-left: 30px;
+      justify-content: flex-start;
+    }
+  }
 }
-.fill-title {
-  height: fit-content;
-  &:hover {
-    height: fit-content;
-    color: black;
-    transition-delay: 0.3s;
-  }
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    content: "Web / App";
-    color: transparent;
-    overflow: hidden;
-    transition: all 0.5s ease;
-    white-space: nowrap;
-  }
+.about_titlebox {
+  position: relative;
+}
+.stroke-title,
+.stroke-title2,
+.stroke-title3,
+.stroke-title4 {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+  font-family: "Rajdhani", serif;
+  font-weight: 600;
+}
+.fill-title,
+.fill-title2,
+.fill-title3,
+.fill-title4 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  height: 0;
+  color: black;
+  font-family: "Rajdhani", serif;
+  font-weight: 600;
 }
 @keyframes hoverRotation {
   0% {
@@ -380,6 +395,35 @@ input:focus {
   background-image: url(/static/img/logo.png);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.about_address {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding: 180px 300px;
+  flex-direction: column;
+  justify-content: center;
+  .about_address-title,
+  .about_address-content {
+    display: flex;
+    p {
+      width: calc(100% / 2);
+      font-family: "Silk Display", sans-serif;
+      color: white;
+      &:nth-of-type(1) {
+        font-size: 40px;
+      }
+      &:nth-of-type(2) {
+        font-size: 18px;
+        font-family: $main__font-family;
+        line-height: 40px;
+      }
+    }
+  }
+  .about_address-content {
+    margin-top: 100px;
+  }
 }
 // #컨택트
 #contactPage01 {
