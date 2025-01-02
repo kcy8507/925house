@@ -1,3 +1,5 @@
+{% extends 'portfolio.html' %}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -90,15 +92,23 @@
     <section class="main">
       <div class="inner">
         <div class="about_main">
-          <p data-aos="fade-up" data-aos-duration="3000">Together</p>
-          <p>
-            <span data-aos="fade-up" data-aos-delay="500">we</span>
-            <span data-aos="fade-up" data-aos-delay="1000">create</span>
-            <span data-aos="fade-up" data-aos-delay="1500">brands</span>
-          </p>
+          <div class="main_title">
+            Design & Marketing Studio
+          </div>
+          <div class="main_about">
+            <p data-aos="fade-up" data-aos-duration="3000">Together</p>
+            <p>
+              <span data-aos="fade-up" data-aos-delay="500">we</span>
+              <span data-aos="fade-up" data-aos-delay="1000">create</span>
+              <span data-aos="fade-up" data-aos-delay="1500">brands</span>
+            </p>
+          </div>
         </div>
         <p></p>
       </div>
+    </section>
+    <section class="portfolio">
+      {% block portfolio-container %}{% endblock portfolio-container %}
     </section>
     <script>
       AOS.init();
