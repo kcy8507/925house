@@ -1,5 +1,3 @@
-{% extends 'portfolio.html' %}
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -107,9 +105,7 @@
         <p></p>
       </div>
     </section>
-    <section class="portfolio">
-      {% block portfolio-container %}{% endblock portfolio-container %}
-    </section>
+    {% include "portfolio-fix.html" %}
     <script>
       AOS.init();
     </script>
