@@ -315,6 +315,7 @@ input:focus {
 .about1__card p:nth-of-type(2) {
   margin-top: 24px;
   font-size: 16px;
+  font-weight: 300;
   line-height: 2.4rem;
 }
 
@@ -362,7 +363,7 @@ input:focus {
   font-size: 16px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 40px;
-  font-weight: 400;
+  font-weight: 300;
   margin-top: 35px;
 }
 
