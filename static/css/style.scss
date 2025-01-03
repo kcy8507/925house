@@ -317,7 +317,7 @@ input:focus {
 }
 .about_intro {
   padding: 100px 0;
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 200;
   line-height: 43px;
   letter-spacing: 2px;
@@ -328,11 +328,16 @@ input:focus {
 .about_intro-img {
   width: 400px;
   height: 700px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 .about_address {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 180px 0;
   justify-content: space-around;
   .about_address-box {
@@ -348,946 +353,226 @@ input:focus {
         font-size: 16px;
         font-family: $main__font-family;
         line-height: 40px;
-        font-weight: 200;
+        font-weight: 400;
         margin-top: 35px;
       }
     }
   }
 }
-// #컨택트
-#contactPage01 {
-  background-color: #f3f2eb;
-
-  display: flex;
-  flex-direction: column;
-  .inner {
-    width: 100%;
-    padding: 171px 30px 125px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .contactPage_btn {
-    margin-top: 114px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-  .prevbtn,
-  .nextbtn {
-    width: 139px;
-    height: 139px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-  .contactPage01_text-container {
-    color: #040404;
-    font-size: 6.2rem;
-    line-height: 8.4rem;
-    font-weight: 700;
-  }
-  .contactPage01_container {
-    margin-top: 55px;
-  }
-}
-.contactPage01_container {
-  margin-top: 160px;
-}
-.contactPage01_subtitle {
-  color: #afafaf;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-.contactPage01_chk-box {
-  margin-top: 26px;
-  input[type="checkbox"] {
-    display: none;
-  }
-  input[type="checkbox"] + label {
-    padding: 20px 40px;
-    border-radius: 49px;
-    border: 1px solid #707070;
-    background: white;
-    font-size: 3.8rem;
-    font-weight: 700;
-    color: #040404;
-    cursor: pointer;
-    display: inline-flex;
-    margin-right: 20px;
-    margin-bottom: 26px;
-  }
-  input[type="checkbox"]:checked + label {
-    border: none;
-    color: white;
-    background: #000000;
-  }
-}
-#contactPage02 {
-  display: none;
-  flex-direction: column;
-  background-color: #f3f2eb;
-
-  .inner {
-    padding: 171px 30px 125px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-  }
-  .contactPage_btn {
-    margin-top: 114px;
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-  .prevbtn,
-  .nextbtn {
-    width: 139px;
-    height: 139px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-  .contactPage02_text-container {
-    color: #040404;
-    font-size: 6.7rem;
-    line-height: 8.4rem;
-    font-weight: 700;
-  }
-  .contactPage02_container {
-    margin-top: 55px;
-  }
-  .contactPage02_container-row {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-.contactPage02_container {
-  margin-top: 160px;
-}
-
-.contactPage02_chk-box {
-  margin-top: 47px;
-  display: flex;
-  flex-direction: column;
-  input[type="text"] {
-    appearance: none;
-    -webkit-appearance: none;
-    margin-bottom: 17px;
-    max-width: 742px;
-    width: 100%;
-    height: 90px;
-    padding: 20px 40px;
-    border-radius: 48px;
-    border: 1px solid #afafaf;
-    background: white;
-    font-size: 4rem;
-    font-weight: 600;
-    color: #040404;
-  }
-  input::-webkit-input-placeholder {
-    color: #afafaf;
-  }
-}
-#contactPage03 {
-  display: none;
-  flex-direction: column;
-  background-color: #f3f2eb;
-
-  .inner {
-    width: 100%;
-    padding: 171px 30px 125px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .contactPage_btn {
-    margin-top: 114px;
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-  .prevbtn,
-  .nextbtn {
-    width: 139px;
-    height: 139px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-  .contactPage03_text-container {
-    color: #040404;
-    font-size: 6.2rem;
-    line-height: 8.4rem;
-    font-weight: 700;
-  }
-  .contactPage03_container {
-    margin-top: 55px;
-  }
-}
-.contactPage03_container {
-  margin-top: 160px;
-}
-.contactPage03_subtitle {
-  color: #afafaf;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-.contactPage03_chk-box {
-  margin-top: 26px;
-  input[type="checkbox"] {
-    display: none;
-  }
-  input[type="checkbox"] + label {
-    padding: 20px 40px;
-    border-radius: 49px;
-    border: 1px solid #707070;
-    background: white;
-    font-size: 3.8rem;
-    font-weight: 700;
-    color: #040404;
-    cursor: pointer;
-    display: inline-flex;
-    margin-right: 20px;
-    margin-bottom: 26px;
-  }
-  input[type="checkbox"]:checked + label {
-    border: none;
-    color: white;
-    background: #000000;
-  }
-}
-#contactPage04 {
-  display: none;
-  flex-direction: column;
-  background-color: #f3f2eb;
-
-  .inner {
-    width: 100%;
-    padding: 171px 30px 125px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .contactPage_btn {
-    margin-top: 114px;
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-  .prevbtn,
-  .nextbtn {
-    width: 139px;
-    height: 139px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-  .contactPage04_text-container {
-    color: #040404;
-    font-size: 6.2rem;
-    line-height: 8.4rem;
-    font-weight: 700;
-  }
-}
-.contactPage04_container {
-  margin-top: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  p {
-    font-size: 7rem;
-    font-weight: 900;
-    color: #040404;
-  }
-}
-
-.contactPage04_date-box {
-  max-width: 631px;
+.about_contact {
   width: 100%;
-  height: 90px;
-  border-radius: 73px;
-  border: 1px solid #aaaaaa;
-  font-size: 3.2rem;
-  font-weight: 600;
-  color: #afafaf;
-  background: #fff;
-  padding: 0 30px;
+  padding: 0 0 150px 0;
+  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  input[type="text"] {
-    appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    background: white;
-    height: 100%;
-    vertical-align: center;
-    text-align: right;
-    padding: 0 10px;
-    font-size: 3.2rem;
-    font-weight: 600;
-    color: #040404;
-  }
-  input#fromY,
-  input#toY {
-    width: 130px;
-    margin-right: 20px;
-  }
-  input#fromM,
-  input#toM {
-    width: 80px;
-    margin-right: 20px;
-  }
-  input#fromD,
-  input#toD {
-    width: 80px;
-  }
-}
-#contactPage05 {
-  display: none;
-  flex-direction: column;
-  background-color: #f3f2eb;
-
-  .inner {
-    padding: 171px 30px 125px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-  }
-  .contactPage_btn {
-    margin-top: 114px;
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-  .prevbtn,
-  .nextbtn {
-    width: 139px;
-    height: 139px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-  .contactPage05_text-container {
-    color: #040404;
-    font-size: 6.7rem;
-    line-height: 8.4rem;
-    font-weight: 700;
-  }
-  .contactPage05_container {
-    margin-top: 55px;
-    max-width: 1000px;
-    width: 100%;
-    align-self: end;
-  }
-  .contactPage05_container-row {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.contactPage05_chk-box {
-  margin-top: 87px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: flex-end;
-  input[type="checkbox"] {
-    display: none;
-  }
-  input[type="checkbox"] + label {
-    border-radius: 71px;
-    border: 1px solid #707070;
-    background: white;
-    font-size: 4.2rem;
-    font-weight: 700;
-    color: #000000;
-    cursor: pointer;
-    display: inline-flex;
-    margin-right: 30px;
-    margin-bottom: 52px;
-    max-width: 294px;
-    width: 100%;
-    height: 119px;
-    align-items: center;
-    justify-content: center;
-    &:nth-of-type(3n) {
-      margin-right: 0;
-    }
-  }
-  input[type="checkbox"]:checked + label {
-    border: none;
-    color: white;
-    background: #000000;
-  }
-}
-#contactPage06,
-#contactPage07 {
-  display: none;
-  flex-direction: column;
-  .inner {
-    padding: 171px 30px 125px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-  }
-  .contactPage_btn {
-    margin-top: 114px;
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-  .prevbtn,
-  .nextbtn {
-    width: 139px;
-    height: 139px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: none;
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-}
-#contactPage06 {
-  background-color: #f3f2eb;
-  .contactPage06_container-row {
-    padding: 190px 0;
-  }
-  .contactPage06_text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .ui-checkbox {
-    --primary-color: #f3f2eb;
-    --secondary-color: #fff;
-    --primary-hover-color: #f3f2eb;
-    /* checkbox */
-    --checkbox-diameter: 40px;
-    --checkbox-border-radius: 5px;
-    --checkbox-border-color: #d9d9d9;
-    --checkbox-border-width: 1px;
-    --checkbox-border-style: solid;
-    /* checkmark */
-    --checkmark-size: 3.2;
-  }
-
-  .ui-checkbox,
-  .ui-checkbox *,
-  .ui-checkbox *::before,
-  .ui-checkbox *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  .ui-checkbox {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: var(--checkbox-diameter);
-    height: var(--checkbox-diameter);
-    border-radius: var(--checkbox-border-radius);
-    background: var(--secondary-color);
-    border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .ui-checkbox::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
-    box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
-    border-radius: inherit;
-    opacity: 0;
-    -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-    -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-    transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
-  }
-
-  .ui-checkbox::before {
-    top: 40%;
-    left: 50%;
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 7px;
-    border-right: 2px solid var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    transform: translate(-50%, -50%) rotate(45deg) scale(0);
-    opacity: 0;
-    -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
-    -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
-    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
-  }
-
-  /* actions */
-
-  .ui-checkbox:hover {
-    border-color: var(--primary-color);
-  }
-
-  .ui-checkbox:checked {
-    background: #000000;
-    border-color: transparent;
-  }
-
-  .ui-checkbox:checked::before {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
-    -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
-    transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
-    -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-    -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-  }
-
-  .ui-checkbox:active:not(:checked)::after {
-    -webkit-transition: none;
-    -o-transition: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    transition: none;
-    opacity: 1;
-  }
-  p {
-    font-size: 31px;
-    color: #000000;
-    text-align: center;
-    font-weight: 700;
-    margin-top: 34px;
-  }
-}
-#contactPage07 {
-  font-size: 64px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 84px;
-  color: #000000;
-  background-color: #f3f2eb;
-}
-.contactPage07_text-container {
-  padding: 150px 0;
-}
-.mb-br {
-  display: none;
-}
-.portfolio-prepare {
-  margin-top: 142px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  line-height: 40px;
-  color: #6a6a6a;
-  font-weight: 700;
   a {
-    margin-top: 35px;
-    font-size: 18px;
-    font-weight: 400;
-    width: 213px;
-    height: 53px;
-    border: 1px solid #f3f2eb;
-    border-radius: 70px;
-    color: #f3f2eb;
+    width: 500px;
+    height: 50px;
+    border: 1px solid #2c2c2c;
     display: flex;
-    align-items: center;
     justify-content: center;
-  }
-  img {
-    margin-left: 15px;
-    width: auto;
-    height: 21px;
-  }
-}
-@media screen and (max-width: 992px) {
-  #contactPage01 .inner {
-    padding: 236px 55px 66px;
-  }
-  #contactPage01 .contactPage01_text-container {
-    font-size: 6.4rem;
-    line-height: 8.4rem;
-  }
-  #contactPage01 .contactPage01_container {
-    margin-top: 160px;
-  }
-  .contactPage01_subtitle {
-    font-size: 2.6rem;
-  }
-  .contactPage01_chk-box input[type="checkbox"] + label {
-    padding: 20px 38px;
-  }
-  #contactPage01 .contactPage_btn {
-    margin-top: 203px;
-  }
-  #contactPage02 .inner {
-    padding: 236px 55px 66px;
-  }
-  #contactPage02 .contactPage02_text-container {
-    font-size: 6.4rem;
-  }
-  #contactPage02 .contactPage02_container-row {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  #contactPage02 .contactPage02_container {
-    margin-top: 164px;
-  }
-  .contactPage02_chk-box {
-    margin-top: 0;
-  }
-  .contactPage02_chk-box input[type="text"] {
-    max-width: 100%;
-  }
-  #contactPage02 .contactPage_btn {
-    margin-top: 151px;
-  }
-  #contactPage03 .inner {
-    padding: 236px 55px 66px;
-  }
-  #contactPage03 .contactPage03_text-container {
-    font-size: 6.4rem;
-  }
-  #contactPage03 .contactPage03_container {
-    margin-top: 160px;
-  }
-  .contactPage03_subtitle {
-    font-size: 2.6rem;
-  }
-  #contactPage03 .contactPage_btn {
-    margin-top: 315px;
-  }
-  #contactPage04 .inner {
-    padding: 236px 55px 66px;
-  }
-  #contactPage04 .contactPage04_text-container {
-    font-size: 6.4rem;
-  }
-  .contactPage04_container {
-    margin-top: 160px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-  }
-  .contactPage04_date-box {
-    max-width: 100%;
-    width: 100%;
-  }
-  .contactPage04_container p {
-    padding: 35px 0;
-  }
-  #contactPage04 .contactPage_btn {
-    margin-top: 245px;
-  }
-  #contactPage05 .inner {
-    padding: 236px 55px 66px;
-  }
-  #contactPage05 .contactPage05_text-container {
-    font-size: 6.4rem;
-  }
-  .contactPage05_chk-box {
-    margin-top: 165px;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .contactPage05_chk-box input[type="checkbox"] + label {
-    max-width: 100%;
-    width: calc(100% / 3 - 30px);
-  }
-  .contactPage05_chk-box input[type="checkbox"] + label:nth-of-type(3n) {
-    margin-right: 6px;
-  }
-  #contactPage05 .contactPage_btn {
-    margin-top: 150px;
-  }
-  #contactPage06 .inner,
-  #contactPage07 .inner {
-    padding: 171px 55px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-  }
-  #contactPage06 .contactPage06_container-row {
-    padding: 190px 0;
-  }
-  #contactPage07 .contactPage_btn {
-    margin-top: 204px;
+    font-size: 18px;
+    &:hover {
+      background: #2c2c2c;
+      color: white;
+      transition: all 0.2s;
+    }
   }
 }
-@media screen and (max-width: 576px) {
-  #contactPage01 .inner {
-    padding: 110px 20px 50px;
+// #컨택트
+input[type="text"],
+textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+textarea {
+  white-space: pre;
+  resize: none;
+}
+.contactPage01 {
+  .inner {
+    padding: 200px 0;
+    display: flex;
   }
-  #contactPage01 .contactPage01_text-container {
-    font-size: 2.6rem;
-    line-height: 4.2rem;
-  }
-  #contactPage01 .contactPage01_container {
-    margin-top: 143px;
-  }
-  .contactPage01_subtitle {
-    font-size: 1.6rem;
-  }
-  .contactPage01_chk-box {
-    margin-top: 18px;
-  }
-  .contactPage01_chk-box input[type="checkbox"] + label {
-    padding: 10px 20px;
-    font-size: 18px;
-    margin-right: 6px;
-    margin-bottom: 8px;
-  }
-  #contactPage01 .contactPage_btn {
-    margin-top: 145px;
-  }
-  #contactPage01 .prevbtn,
-  #contactPage01 .nextbtn {
-    width: 76px;
-    height: 76px;
-  }
-  #contactPage02 .inner {
-    padding: 110px 20px 50px;
-  }
-  #contactPage02 .contactPage02_text-container {
-    font-size: 2.6rem;
-    line-height: 4.2rem;
-  }
-  #contactPage02 .contactPage02_container {
-    margin-top: 143px;
-  }
-  .contactPage02_chk-box input[type="text"] {
-    margin-bottom: 9px;
-    height: 49px;
-    padding: 13px 23px;
-    font-size: 2rem;
-  }
-  #contactPage02 .contactPage_btn {
-    margin-top: 151px;
-  }
-  #contactPage02 .prevbtn,
-  #contactPage02 .nextbtn {
-    width: 76px;
-    height: 76px;
-  }
-  #contactPage03 .inner {
-    padding: 110px 20px 50px;
-  }
-  #contactPage03 .contactPage03_text-container {
-    font-size: 2.6rem;
-    line-height: 4.2rem;
-  }
-  #contactPage03 .contactPage03_container {
-    margin-top: 143px;
-  }
-  .contactPage03_subtitle {
-    font-size: 1.6rem;
-  }
-  .contactPage03_chk-box {
-    margin-top: 18px;
-  }
-  .contactPage03_chk-box input[type="checkbox"] + label {
-    padding: 10px 20px;
-    font-size: 18px;
-    margin-right: 6px;
-    margin-bottom: 8px;
-  }
-  #contactPage03 .contactPage_btn {
-    margin-top: 244px;
-  }
-  #contactPage03 .prevbtn,
-  #contactPage03 .nextbtn {
-    width: 76px;
-    height: 76px;
-  }
-  #contactPage04 .inner {
-    padding: 110px 20px 50px;
-  }
-  #contactPage04 .contactPage04_text-container {
-    font-size: 2.6rem;
-    line-height: 4.2rem;
-  }
-  #contactPage04 .contactPage04_container {
-    margin-top: 59px;
-  }
-  #contactPage04 .contactPage_btn {
-    margin-top: 244px;
-  }
-  #contactPage04 .prevbtn,
-  #contactPage04 .nextbtn {
-    width: 76px;
-    height: 76px;
-  }
-  .contactPage04_date-box {
-    height: 42px;
-    font-size: 18px;
-    padding: 0 45px;
-  }
-  .contactPage04_date-box input#fromY,
-  .contactPage04_date-box input#toY {
-    width: 80px;
-    margin-right: 0px;
-    font-size: 18px;
-  }
-  .contactPage04_date-box input#fromM,
-  .contactPage04_date-box input#toM {
-    width: 60px;
-    margin-right: 0px;
-    font-size: 18px;
-  }
-  .contactPage04_date-box input#fromD,
-  .contactPage04_date-box input#toD {
-    width: 60px;
-    font-size: 18px;
-  }
-  .contactPage04_container p {
-    padding: 20px 0;
-    font-size: 26px;
-  }
-  #contactPage05 .contactPage05_text-container {
-    font-size: 2.6rem;
-    line-height: 4.2rem;
-  }
-  #contactPage05 .inner {
-    padding: 110px 20px 50px;
-  }
-  #contactPage05 .contactPage_btn {
-    margin-top: 244px;
-  }
-  #contactPage05 .contactPage05_container {
-    margin-top: 143px;
-  }
-  .contactPage05_chk-box input[type="checkbox"] + label {
-    width: calc(33.3333333333% - 3px);
-  }
-  .contactPage05_chk-box {
-    margin-top: 0;
-  }
-  .contactPage05_chk-box input[type="checkbox"] + label {
-    height: 42px;
-    font-size: 18px;
-    padding: 0 19px;
-    max-width: inherit;
-    width: auto;
-    margin: 0 6px 8px 0;
-  }
-  #contactPage05 .contactPage_btn {
-    margin-top: 244px;
-  }
-  #contactPage05 .prevbtn,
-  #contactPage05 .nextbtn {
-    width: 76px;
-    height: 76px;
-  }
-  #contactPage06 .inner,
-  #contactPage07 .inner {
-    padding: 0px 20px;
+  .contact_title {
+    font-size: 23px;
+    font-weight: 200;
+    line-height: 43px;
+    letter-spacing: 2px;
     display: flex;
     flex-direction: column;
-    position: relative;
+    p {
+      margin-bottom: 100px;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 200;
+      line-height: 25px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      width: 400px;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+}
+.contact_img-sticky {
+  position: sticky;
+  top: 10%;
+}
+.contact_input {
+  padding: 200px 0 150px 200px;
+  width: 100%;
+  max-width: 700px;
+}
+.input-box,
+.textarea-box {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  input {
     width: 100%;
+    height: 35px;
+    border: 1px solid #7e7e7e;
+    background: none;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 300;
   }
-  #contactPage06 .ui-checkbox {
-    --checkbox-diameter: 29px;
-    --checkmark-size: 2.3;
+}
+.check_input {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  label {
+    margin: 0;
   }
-  #contactPage06 .contactPage06_container-row {
-    padding: 289px 0 329px;
+  input {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0 15px 0 0;
   }
-  #contactPage06 p {
-    font-size: 18px;
-    margin-top: 32px;
+}
+.textarea-box {
+  margin: 15px 0;
+  textarea {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    height: 100px;
+    background: none;
+    white-space: break-spaces;
   }
-  #contactPage06 .contactPage_btn {
-    margin-top: 0;
+}
+.fileUpload {
+  margin-top: 15px;
+  label {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
   }
-  #contactPage06 .prevbtn,
-  #contactPage06 .nextbtn {
-    width: 76px;
-    height: 76px;
+  input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #7e7e7e;
+    background: none;
+    margin: 15px 0 25px;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 200;
+    color: #2c2c2c;
   }
-  .contactPage07_text-container {
-    padding: 350px 0 286px;
+}
+input[type="file" i]::-webkit-file-upload-button {
+  border: none;
+  width: 90px;
+  height: 100%;
+  background: #d1d1d1;
+  font-weight: 200;
+  font-size: 15px;
+}
+.privacy {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
   }
-  #contactPage07 {
-    font-size: 18px;
-    line-height: 40px;
+  textarea {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    height: 100px;
+    background: none;
+    white-space: break-spaces;
+    line-height: 19px;
+    margin-bottom: 15px;
   }
-  #contactPage07 .contactPage_btn {
-    margin-top: 0;
+}
+.privacy_check {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  label {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
   }
-  #contactPage07 .prevbtn,
-  #contactPage07 .nextbtn {
-    width: 86px;
-    height: 86px;
+  input {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0 15px 0 0;
   }
-  .contact {
-    background-image: url(/static/img/contactgif576.gif);
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.contact_submit {
+  width: 100%;
+  height: 45px;
+  margin: 50px 0 0 0;
+  button {
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #7e7e7e;
+    background: none;
+    //color: #7e7e7e;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background: #1f1f1f;
+      color: white;
+      transition: all 0.2s;
+    }
   }
-  .contact .box p {
-    font-size: 1.6rem;
-  }
+}
+span.reddot {
+  width: 5px;
+  height: 5px;
+  display: block;
+  border-radius: 100%;
+  background: red;
+  margin: 0 8px;
 }
