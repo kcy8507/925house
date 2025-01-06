@@ -27,6 +27,6 @@ urlpatterns = [
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-admin.site.site_header = "mangosoft"
-admin.site.site_title = "MANGO Admin"
-admin.site.index_title = "MangoSoft"
+admin.site.site_header = "925house"
+admin.site.site_title = "925house Admin"
+admin.site.index_title = "925house"
