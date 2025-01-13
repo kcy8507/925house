@@ -225,9 +225,6 @@ input:focus {
 .portfolio {
   width: 100%;
   height: 100%;
-  .inner {
-    //  max-width: 1780px;
-  }
 }
 .portfolio_wrap {
   width: 100%;
@@ -268,22 +265,15 @@ input:focus {
   .inner {
     padding: 0 30px;
   }
-
   .swiper {
     width: 100%;
-    height: 100%;
+    height: 100vh !important;
   }
-
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: red;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    &:nth-of-type(2) {
-      background: blue;
-    }
+    height: 100vh !important;
   }
 }
 
@@ -292,7 +282,7 @@ input:focus {
   justify-content: flex-end;
   flex-direction: column;
   align-items: flex-end;
-  // height: 100vh;
+  height: 100vh;
   p {
     text-align: right;
     font-size: 230px;
@@ -305,15 +295,22 @@ input:focus {
     }
   }
 }
+.about_intro {
+  width: 100%;
+  height: 100%;
+}
 .about_option {
-  //height: 100vh;
+  max-width: 1580px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 .about1__card {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 250px 0;
-  width: 100%;
+  width: 50%;
+
   .box {
     padding: 45px;
     padding-left: 0;
@@ -345,15 +342,21 @@ input:focus {
     }
   }
 }
-.about_intro {
-  display: flex;
-  height: 100%;
-}
+
 .about_intro-title {
-  // min-height: 100vh;
-  height: 100%;
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
   span {
     font-family: "Silk Display", sans-serif;
     font-size: 20px;
@@ -365,29 +368,20 @@ input:focus {
   }
 }
 .about_intro-img {
-  // height: 700px;
-  // position: sticky;
-  // top: 0;
-  width: 90%;
-  height: fit-content;
-  margin-top: 28%;
-  position: sticky;
-  top: 28%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 200px;
+  z-index: 1;
+  width: 700px;
+  height: auto;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
-.about_intro-sticky {
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
+
 .about_address {
   display: flex;
   width: 100%;
