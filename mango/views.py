@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics, viewsets
 
-from mango.models import Request
-from mango.serializers import RequestSerializer
+from mango.models import Request, Portfolio
+from mango.serializers import RequestSerializer, PortfolioSerializer
 
 
 def index(request):
@@ -27,7 +27,19 @@ def contact(request):
 #     return render(request, "contact05.html")
 
 def portfolio(request):
-    return render(request, "portfolio.html")
+    portfolios = Portfolio.objects.all()
+    serializer = PortfolioSerializer(portfolios, many=True)
+    return render(request, "portfolio.html", {"portfolio": serializer.data})
+
+def portfolio_detail(request, id):
+    portfolio = Portfolio.objects.get(id=id)
+
+    serializer = PortfolioSerializer(portfolio)
+    return render(
+        request,
+        "portfolio-detail.html",
+        {"portfolio": serializer.data},
+    )
 
 class RequestView(viewsets.ModelViewSet):
     queryset = Request.objects.all()

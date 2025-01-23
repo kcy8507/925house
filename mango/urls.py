@@ -4,7 +4,7 @@ from rest_framework.routers import SimpleRouter
 from mango.views import (
     index, about, contact,
     # contact02, contact03, contact04, contact05,
-    portfolio, RequestView
+    portfolio, portfolio_detail, RequestView
 )
 
 router = SimpleRouter()
@@ -19,4 +19,5 @@ urlpatterns += [
     # path("contact04", contact04, name="contact04"),
     # path("contact05", contact05, name="contact05"),
     path("portfolio", portfolio, name="portfolio"),
+    path("portfolio/<int:id>", portfolio_detail, name="portfolio_detail"),
 ]

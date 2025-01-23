@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="925house"/>
-    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="static" "imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="No-Cache">
     <meta http-equiv="Pragma" content="No-Cache">
     <meta name="format-detection" content="telephone=no"/>
@@ -21,14 +21,14 @@
     <meta property="og:title" content="925house"/>
     <meta property="og:description" content="925house"/>
     <meta property="og:image" content="img/"/>
-    <meta property="og:url" content="https://925house.co.kr/"/>
+    <meta property="og:url" content="URL"/>
 
     <meta property="twitter:card" content="summary"/>
     <meta property="twitter:site" content="925house"/>
     <meta property="twitter:title" content="925house"/>
     <meta property="twitter:description" content="925house"/>
     <meta property="twitter:image" content="img/"/>
-    <meta property="twitter:url" content="https://925house.co.kr/"/>
+    <meta property="twitter:url" content="URL"/>
 
     <title>925house</title>
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}"/>
@@ -60,6 +60,7 @@
     <script defer="defer" src="{% static "js/loader.js" %}"></script>
     <script defer="defer" src="{% static "js/main.js" %}"></script>
     <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
+    <script defer="defer" src="{% static "js/portfolio.js" %}"></script>
 
   </head>
 
@@ -87,27 +88,21 @@
         </div>
       </div>
     </section>
-    <section class="main">
+    <section class="portfolio">
       <div class="inner">
-        <div class="about_main">
-          <div class="main_title">
-            Design & Marketing Studio
-          </div>
-          <div class="main_about">
-            <p data-aos="fade-up" data-aos-duration="3000">Together</p>
-            <p>
-              <span data-aos="fade-up" data-aos-delay="500">we</span>
-              <span data-aos="fade-up" data-aos-delay="1000">create</span>
-              <span data-aos="fade-up" data-aos-delay="1500">brands</span>
-            </p>
+        <div class="portfolio_wrap">
+          <div class="work_wrap" data-aos="fade-up" data-aos-duration="1500">
+            <p>수정해주세욥</p>
           </div>
         </div>
-        <p></p>
       </div>
     </section>
-    {% include "portfolio-fix.html" %}
+    <!-- matter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
     <script>
       AOS.init();
     </script>
+  </body>
 
-  </html>
+</html>

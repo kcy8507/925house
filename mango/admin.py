@@ -1,5 +1,5 @@
 from django.contrib import admin
-from mango.models import Request
+from mango.models import Request, Portfolio
 
 
 class RequestAdmin(admin.ModelAdmin):
@@ -22,5 +22,9 @@ class RequestAdmin(admin.ModelAdmin):
     # get_service_display.short_description = "필요서비스"
     # get_request_display.short_description = "의뢰요청"
 
+class PortfolioAdmin(admin.ModelAdmin):
+    list_display = ["name", "created"]
+
 
 admin.site.register(Request, RequestAdmin)
+admin.site.register(Portfolio, PortfolioAdmin)

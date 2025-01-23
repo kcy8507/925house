@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from mango.models import Request
+from mango.models import Request, Portfolio
 from mango.mail import EmailMultiAlternatives
 
 
@@ -44,3 +44,23 @@ class RequestSerializer(serializers.ModelSerializer):
     #     if participation.count() >= 38:
     #         raise serializers.ValidationError("해당 날짜의 정원이 차서 신청이 불가능합니다.")
     #     return super().validate(attrs)
+
+class PortfolioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Portfolio
+        fields = [
+            "id",
+            "name",
+            "image",
+            "created",
+        ]
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        image = {
+            "url": representation.pop("image"),
+            "size": instance.image.size,
+            "name": instance.image.name,
+        }
+        representation["image"] = image
+        return representation
