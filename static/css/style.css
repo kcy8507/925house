@@ -2,8 +2,11 @@
 /* common */
 @import "reset.css";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
-@import url("https://fonts.cdnfonts.com/css/silk-display");
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "KoPubWorld";
+  src: url("fonts/KoPubWorld Batang_Pro Bold.otf.ttf") format("truetype");
+  font-weight: normal;
+}
 /*
 extraLight 200
 light 300
@@ -13,18 +16,6 @@ semiBold 600
 bold 700
 black 900
 */
-@font-face {
-  font-family: "Metropolis-Regular";
-  src: url("/static/fonts/Metropolis-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Metropolis-SemiBold";
-  src: url("/static/fonts/Metropolis-SemiBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Metropolis-Black";
-  src: url("/static/fonts/Metropolis-Black.woff2") format("woff2");
-}
 * {
   box-sizing: border-box;
   -webkit-user-select: none;
@@ -47,7 +38,6 @@ body {
   margin: 0 !important;
   position: relative;
   color: #040404;
-  background-color: #f3f2eb;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -69,7 +59,7 @@ input:focus {
 .inner {
   /* 1920 - (140 * 2) = 1640px */
   /* -패딩값 30씩 */
-  max-width: 1580px;
+  max-width: 1340px;
   margin: 0 auto;
   position: relative;
 }
@@ -131,7 +121,6 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3f2eb;
   z-index: 1000;
   text-align: center;
   transition: all 0.5s;
@@ -149,55 +138,117 @@ input:focus {
   padding: 10px 0;
   height: auto;
   width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 5;
-  position: fixed;
-  background: #f3f2eb;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
-}
-.header .inner {
-  padding: 0 30px;
 }
 .header__wrap {
+  width: 100%;
+  padding: 98px 0 57px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #141414;
 }
 
 .logo {
   width: 100%;
-  height: 40px;
+  height: 74px;
 }
 
 .menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 47px;
 }
 .menu li {
-  margin-left: 100px;
-  text-align: right;
+  border: 1px solid #141414;
+  border-radius: 60px;
+  height: 34px;
+  padding: 0 17px;
   font-size: 20px;
-  font-family: "Metropolis-Regular", serif;
-  letter-spacing: 3px;
   color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
 }
 .menu li:first-child {
   margin-left: 0;
 }
 
-.main {
-  background-image: url(/static/img/main.png);
-  background-position: center 30%;
-  background-size: 35%;
+.active-menu {
+  background-color: #141414;
+}
+.active-menu a {
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  padding: 126px 0 224px;
+  background-color: #141414;
+}
+.footer .inner {
+  padding: 0 30px;
+}
+
+.footer_logoimg {
+  width: 220px;
+  height: 67px;
+}
+
+.footer_logo ul {
+  margin-top: 48px;
+}
+.footer_logo ul li {
+  margin-bottom: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 200;
+}
+.footer_logo ul li img {
+  margin-right: 15px;
+}
+
+.footer_bg {
+  background-image: url(/static/img/footerwin.png);
+  width: 100%;
+  height: 40px;
+  background-position: center;
   background-repeat: no-repeat;
+}
+
+.footer_copy {
+  font-size: 14px;
+  color: #bfbfbf;
+  position: absolute;
+  bottom: -30%;
+}
+
+.footer_email {
+  margin-top: 226px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer_email p {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "KoPubWorld", serif;
+  color: white;
+}
+
+.email_process {
+  margin-top: 17px;
+}
+
+.main {
   width: 100%;
 }
 .main .inner {
   padding: 0 30px;
-}
-
-.main_img {
-  display: flex;
 }
 
 .about {
@@ -205,18 +256,70 @@ input:focus {
 }
 
 .main_title {
-  text-align: center;
+  font-family: "KoPubWorld", serif;
+  text-align: left;
   position: relative;
-  top: -20%;
-  font-weight: 200;
-  font-size: 20px;
-  width: 100%;
+  margin-top: 150px;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 86.8px;
 }
 
 .main_studio {
   padding: 0 30px;
 }
 
+.main_about {
+  margin-top: 48px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 200;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+}
+.main_about p {
+  padding: 0 15px;
+}
+.main_about span {
+  line-height: normal;
+  font-size: 58px;
+  font-weight: 300;
+  font-family: "KoPubWorld", serif;
+}
+
+.main_scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 135px;
+  width: 100%;
+  height: 54px;
+}
+.main_scroll a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scroll1 {
+  margin-bottom: 10px;
+  animation: updownAni 1.3s ease-in-out infinite alternate;
+}
+
+.scroll2 {
+  animation: updownAni 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes updownAni {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 2rem);
+  }
+}
 .portfolio {
   width: 100%;
   height: 100%;
@@ -227,7 +330,7 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 150px 0;
+  padding: 100px 0 380px;
 }
 
 .work_wrap {
@@ -248,17 +351,9 @@ input:focus {
      object-fit: cover;
 }
 .work_wrap p {
-  letter-spacing: 3px;
-}
-.work_wrap p:first-of-type {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 200;
   margin-top: 20px;
-}
-.work_wrap p:nth-of-type(2) {
-  font-size: 16px;
-  font-weight: 300;
-  margin-top: 15px;
 }
 
 .about .inner {
@@ -277,21 +372,11 @@ input:focus {
 
 .about_main {
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
-  align-items: flex-end;
-  height: 100vh;
 }
 .about_main p {
-  text-align: right;
-  font-size: 230px;
-  font-family: "Silk Display", sans-serif;
-}
-.about_main p:nth-child(2) {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-weight: 300;
-  font-size: 199px;
-  margin-top: 50px;
+  text-align: left;
+  font-size: 24px;
 }
 
 .about_intro {

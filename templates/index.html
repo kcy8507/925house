@@ -70,42 +70,70 @@
       <img src="{% static "img/loadingg.gif" %}" alt="다음페이지">
     </div>
     <section class="header">
-      <div class="inner">
-        <div class="header__wrap">
-          <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
-          <ul class="menu">
-            <li>
-              <a href="/about">ABOUT</a>
-            </li>
-            <li>
-              <a href="/portfolio">PORTFOLIO</a>
-            </li>
-            <li>
-              <a href="/contact">CONTACT</a>
-            </li>
-          </ul>
-        </div>
+      <div class="header__wrap">
+        <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
       </div>
+      <ul class="menu">
+        <li class="active-menu">
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/portfolio">Service</a>
+        </li>
+        <li>
+          <a href="/portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
     </section>
     <section class="main">
       <div class="inner">
         <div class="about_main">
           <div class="main_title">
-            Design & Marketing Studio
+            Everthing You Need,<br>All in One Place
           </div>
           <div class="main_about">
-            <p data-aos="fade-up" data-aos-duration="3000">Together</p>
-            <p>
-              <span data-aos="fade-up" data-aos-delay="500">we</span>
-              <span data-aos="fade-up" data-aos-delay="1000">create</span>
-              <span data-aos="fade-up" data-aos-delay="1500">brands</span>
-            </p>
+            <span>(</span>
+            <p>925house는 브랜딩부터 디자인, 마케팅까지<br>한번에 편리한 서비스를 제공합니다.</p>
+            <span>)</span>
           </div>
         </div>
-        <p></p>
+        <div class="main_scroll">
+          <a href="#portfolio">
+            <img class="scroll1" src="{% static "img/scroll1.png" %}" alt="스크롤">
+            <img class="scroll2" src="{% static "img/scroll2.png" %}" alt="스크롤">
+          </a>
+        </div>
       </div>
     </section>
     {% include "portfolio-fix.html" %}
+    <section class="footer">
+      <div class="inner">
+        <div class="footer_logo">
+          <img class="footer_logoimg" src="{% static "img/footerlogo.png" %}" alt="푸터로고">
+          <ul>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              925house.official @gmail.com
+            </li>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              000.000.0000</li>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              @925house</li>
+          </ul>
+        </div>
+        <div class="footer_email">
+          <p>Build house</p>
+          <div class="email_process">
+            <img class="emailstart" src="{% static "img/footermail.png" %}" alt="이메일">
+            <img class="emailend" src="{% static "img/footermailbox.png" %}" alt="이메일">
+          </div>
+        </div>
+        <div class="footer_bg"></div>
+        <div class="footer_copy">COPYRIGHT© 925house.ALL RIGHTS RESERVED</div>
+      </div>
+    </section>
     <script>
       AOS.init();
     </script>
