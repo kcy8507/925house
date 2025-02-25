@@ -220,6 +220,13 @@ input:focus {
   height: 40px;
   background-position: center;
   background-repeat: no-repeat;
+
+  background-size: contain;
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: -50%;
+  transform: translate(50%, -50%);
 }
 
 .footer_copy {
@@ -528,7 +535,6 @@ textarea {
     p {
       &:last-of-type {
         font-family: $main__font-family;
-        margin-bottom: 50px;
         font-weight: 200;
         line-height: 26px;
         font-size: 18px;
@@ -537,13 +543,19 @@ textarea {
   }
 }
 .contact_input {
-  padding: 70px 0 0 380px;
+  padding: 70px 0 0 0;
   width: 100%;
+  max-width: 955px;
 }
 .contact_input-descript {
   font-size: 20px;
   line-height: 129%;
   margin-bottom: 36px;
+}
+.contact_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .input-box,
 .textarea-box {
@@ -558,7 +570,7 @@ textarea {
     margin-bottom: 15px;
     padding: 25px 10px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 100;
     color: #2d2d2d;
     &::placeholder {
       color: #949494;
@@ -575,10 +587,11 @@ textarea {
     margin-bottom: 15px;
     padding: 25px 10px;
     font-size: 16px;
-    font-weight: 300;
     color: #2d2d2d;
     white-space: break-spaces;
+    font-weight: 400;
     &::placeholder {
+      font-weight: 100;
       color: #949494;
     }
   }
@@ -603,11 +616,14 @@ textarea {
     margin-bottom: 15px;
     padding: 25px 10px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 100;
     color: #2d2d2d;
     white-space: break-spaces;
     line-height: 19px;
     margin-bottom: 15px;
+    &::placeholder {
+      color: #949494;
+    }
   }
 }
 .privacy_check {
@@ -627,7 +643,20 @@ textarea {
     margin: 0 15px 0 0;
   }
 }
-
+.contact_mail {
+  display: flex;
+  flex-direction: column;
+  p {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+}
 .contact_submit {
   margin-top: 104px;
   width: 100%;
@@ -636,14 +665,15 @@ textarea {
   justify-content: center;
   align-items: center;
   button {
-    font-size: 16px;
+    font-family: $main__font-family;
+    font-size: 20px;
     width: 160px;
     height: 100%;
     border-radius: 60px;
     border: 1px solid #141414;
     color: #141414;
     background: none;
-    font-weight: 200;
+    font-weight: 300;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -722,13 +752,7 @@ span.reddot {
     margin-top: 21px;
   }
   .footer_bg {
-    background-size: contain;
     height: 33px;
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    left: -50%;
-    transform: translate(50%, -50%);
   }
   .footer_email p {
     font-size: 24px;
@@ -741,6 +765,32 @@ span.reddot {
     color: #bfbfbf;
     position: absolute;
     bottom: -70px;
+  }
+  .contact_mail {
+    display: none;
+  }
+  .contactPage01 .contact_title {
+    font-size: 52px;
+  }
+  .contactPage01 .contact_title p:last-of-type {
+    font-size: 14px;
+  }
+  .contact_input {
+    padding: 90px 0 0 0;
+  }
+  .contact_input-descript {
+    font-size: 18px;
+    margin-bottom: 42px;
+  }
+  .input-box input,
+  .textarea-box input {
+    font-size: 18px;
+  }
+  .contact_submit {
+    height: 43px;
+  }
+  .contact_submit button {
+    width: 132px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -836,5 +886,37 @@ span.reddot {
   .footer_copy {
     font-size: 6px;
     bottom: -60px;
+  }
+  .contactPage01 .inner {
+    padding: 47px 20px 120px;
+  }
+  .contactPage01 .contact_title {
+    font-size: 24px;
+  }
+  .contactPage01 .contact_title p:last-of-type {
+    font-size: 9px;
+    line-height: normal;
+  }
+  .contact_input {
+    padding: 55px 0 0 0;
+  }
+  .contact_input-descript {
+    font-size: 13px;
+    margin-bottom: 33px;
+  }
+  .input-box input,
+  .textarea-box input {
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    font-size: 15px;
+  }
+  .contact_submit {
+    height: 29px;
+    margin-top: 50px;
+  }
+  .contact_submit button {
+    width: 73px;
+    font-size: 15px;
   }
 }

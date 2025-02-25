@@ -217,6 +217,12 @@ input:focus {
   height: 40px;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: -50%;
+  transform: translate(50%, -50%);
 }
 
 .footer_copy {
@@ -538,21 +544,27 @@ textarea {
 }
 .contactPage01 .contact_title p:last-of-type {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  margin-bottom: 50px;
   font-weight: 200;
   line-height: 26px;
   font-size: 18px;
 }
 
 .contact_input {
-  padding: 70px 0 0 380px;
+  padding: 70px 0 0 0;
   width: 100%;
+  max-width: 955px;
 }
 
 .contact_input-descript {
   font-size: 20px;
   line-height: 129%;
   margin-bottom: 36px;
+}
+
+.contact_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .input-box,
@@ -570,7 +582,7 @@ textarea {
   margin-bottom: 15px;
   padding: 25px 10px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 100;
   color: #2d2d2d;
 }
 .input-box input::-moz-placeholder, .textarea-box input::-moz-placeholder {
@@ -590,14 +602,16 @@ textarea {
   margin-bottom: 15px;
   padding: 25px 10px;
   font-size: 16px;
-  font-weight: 300;
   color: #2d2d2d;
   white-space: break-spaces;
+  font-weight: 400;
 }
 .textarea-box textarea::-moz-placeholder {
+  font-weight: 100;
   color: #949494;
 }
 .textarea-box textarea::placeholder {
+  font-weight: 100;
   color: #949494;
 }
 
@@ -622,11 +636,17 @@ textarea {
   margin-bottom: 15px;
   padding: 25px 10px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 100;
   color: #2d2d2d;
   white-space: break-spaces;
   line-height: 19px;
   margin-bottom: 15px;
+}
+.privacy textarea::-moz-placeholder {
+  color: #949494;
+}
+.privacy textarea::placeholder {
+  color: #949494;
 }
 
 .privacy_check {
@@ -647,6 +667,21 @@ textarea {
   margin: 0 15px 0 0;
 }
 
+.contact_mail {
+  display: flex;
+  flex-direction: column;
+}
+.contact_mail p {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.contact_mail span {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
 .contact_submit {
   margin-top: 104px;
   width: 100%;
@@ -656,14 +691,15 @@ textarea {
   align-items: center;
 }
 .contact_submit button {
-  font-size: 16px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 20px;
   width: 160px;
   height: 100%;
   border-radius: 60px;
   border: 1px solid #141414;
   color: #141414;
   background: none;
-  font-weight: 200;
+  font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -740,13 +776,7 @@ span.reddot {
     margin-top: 21px;
   }
   .footer_bg {
-    background-size: contain;
     height: 33px;
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    left: -50%;
-    transform: translate(50%, -50%);
   }
   .footer_email p {
     font-size: 24px;
@@ -759,6 +789,32 @@ span.reddot {
     color: #bfbfbf;
     position: absolute;
     bottom: -70px;
+  }
+  .contact_mail {
+    display: none;
+  }
+  .contactPage01 .contact_title {
+    font-size: 52px;
+  }
+  .contactPage01 .contact_title p:last-of-type {
+    font-size: 14px;
+  }
+  .contact_input {
+    padding: 90px 0 0 0;
+  }
+  .contact_input-descript {
+    font-size: 18px;
+    margin-bottom: 42px;
+  }
+  .input-box input,
+  .textarea-box input {
+    font-size: 18px;
+  }
+  .contact_submit {
+    height: 43px;
+  }
+  .contact_submit button {
+    width: 132px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -853,5 +909,37 @@ span.reddot {
   .footer_copy {
     font-size: 6px;
     bottom: -60px;
+  }
+  .contactPage01 .inner {
+    padding: 47px 20px 120px;
+  }
+  .contactPage01 .contact_title {
+    font-size: 24px;
+  }
+  .contactPage01 .contact_title p:last-of-type {
+    font-size: 9px;
+    line-height: normal;
+  }
+  .contact_input {
+    padding: 55px 0 0 0;
+  }
+  .contact_input-descript {
+    font-size: 13px;
+    margin-bottom: 33px;
+  }
+  .input-box input,
+  .textarea-box input {
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    font-size: 15px;
+  }
+  .contact_submit {
+    height: 29px;
+    margin-top: 50px;
+  }
+  .contact_submit button {
+    width: 73px;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

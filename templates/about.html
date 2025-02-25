@@ -21,29 +21,37 @@
     <meta property="og:title" content="925house"/>
     <meta property="og:description" content="925house"/>
     <meta property="og:image" content="img/"/>
-    <meta property="og:url" content="URL"/>
+    <meta property="og:url" content="https://925house.co.kr/"/>
 
     <meta property="twitter:card" content="summary"/>
     <meta property="twitter:site" content="925house"/>
     <meta property="twitter:title" content="925house"/>
     <meta property="twitter:description" content="925house"/>
     <meta property="twitter:image" content="img/"/>
-    <meta property="twitter:url" content="URL"/>
+    <meta property="twitter:url" content="https://925house.co.kr/"/>
 
     <title>925house</title>
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}"/>
 
     <!-- css 파일 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js" integrity="sha512-nTHzMQK7lwWt8nL4KF6DhwLHluv6dVq/hNnj2PBN0xMl2KaMm1PM02csx57mmToPAodHmPsipoERRNn4pG7f+Q==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static "css/style.css" %}">
 
     <!-- js 파일 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -52,7 +60,6 @@
     <script defer="defer" src="{% static "js/loader.js" %}"></script>
     <script defer="defer" src="{% static "js/main.js" %}"></script>
     <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   </head>
 
@@ -63,150 +70,52 @@
       <img src="{% static "img/loadingg.gif" %}" alt="다음페이지">
     </div>
     <section class="header">
+      <div class="header__wrap">
+        <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
+      </div>
+      <ul class="menu">
+        <li class="active-menu">
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/portfolio">Service</a>
+        </li>
+        <li>
+          <a href="/portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </section>
+    <section class="about"></section>
+    <section class="footer">
       <div class="inner">
-        <div class="header__wrap">
-          <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
-          <ul class="menu">
-            <li>
-              <a href="/about">ABOUT</a>
+        <div class="footer_logo">
+          <img class="footer_logoimg" src="{% static "img/footerlogo.png" %}" alt="푸터로고">
+          <ul>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              925house.official @gmail.com
             </li>
-            <li>
-              <a href="/portfolio">PORTFOLIO</a>
-            </li>
-            <li>
-              <a href="/contact">CONTACT</a>
-            </li>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              000.000.0000</li>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              @925house</li>
           </ul>
         </div>
+        <div class="footer_email">
+          <p>Build house</p>
+          <div class="email_process">
+            <img class="emailstart" src="{% static "img/footermail.png" %}" alt="이메일">
+            <img class="emailend" src="{% static "img/footermailbox.png" %}" alt="이메일">
+          </div>
+        </div>
+        <div class="footer_bg"></div>
+        <div class="footer_copy">COPYRIGHT© 925house.ALL RIGHTS RESERVED</div>
       </div>
     </section>
-    <section class="about">
-      <div class="about_intro">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="about_intro-title">
-                <p>
-                  <span>Design & Marketing Studio</span><br>
-                  925house는 단지 디자인, 마케팅을 넘어서 브랜딩, 웹/앱, 종합 컨설팅 등<br>
-                  고객의 니즈에 맞춘 모든 것을 해드립니다.</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="about_option">
-                <div class="about1__card">
-                  <div class="box">
-                    <p>Design</p>
-                    <p>브랜드만의 고유한 분위기를 살려 다양한 분야에 전문성을 가진 디자인을 제공합니다.</p>
-                  </div>
-                  <div class="box">
-                    <p>Digital Marketing</p>
-                    <p>고객과 브랜드를 연결하는데 중점을 두고 철저히 분석하며, 감동과 공감을 주는 창의적인 컨텐츠를 통해 소통하는 마케팅을 추구합니다.</p>
-                  </div>
-                  <div class="box">
-                    <p>Branding</p>
-                    <p>오랜 시간이 지나도 고유의 분위기와 가치를 유지하는 브랜딩을 추구합니다.</p>
-                  </div>
-                  <div class="box">
-                    <p>Web / App</p>
-                    <p>혁신적인 웹디자인과 개발 서비스를 제공하며, 업무 생산성 향상을 위한 스마트 관리 솔루션을 개발하고 운영하고 있습니다.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about_intro-img">
-            <img src="{% static "img/about_img.png" %}" alt="925하우스">
-          </div>
-        </div>
-      </div>
-      <div class="inner">
+    <script>
+      AOS.init();
+    </script>
 
-        <div class="about_address">
-          <div class="about_address-box" data-aos="fade-up" data-aos-duration="500">
-            <p>
-              디자인
-            </p>
-            <p>
-              그래픽 디자인<br>
-              명함 디자인<br>
-              패키지 디자인<br>
-              인쇄 디자인<br>
-              카탈로그, 리플렛<br>
-              웹디자인<br>
-              영상디자인<br>
-            </p>
-          </div>
-          <div class="about_address-box" data-aos="fade-up" data-aos-duration="700">
-            <p>마케팅</p>
-            <p>
-              디지털 마케팅<br>
-              SNS 광고<br>
-              브랜드블로그<br>
-              네이버 지도 마케팅<br>
-              내부서비스 강화/관리<br>
-            </p>
-          </div>
-          <div class="about_address-box" data-aos="fade-up" data-aos-duration="900">
-            <p>브랜딩</p>
-            <p>
-              브랜딩<br>
-              네이밍<br>
-              슬로건<br>
-              로고 디자인<br>
-              카피라이팅<br>
-            </p>
-          </div>
-          <div class="about_address-box" data-aos="fade-up" data-aos-duration="1100">
-            <p>웹/앱</p>
-            <p>
-              웹/앱 개발<br>
-              사용자경험 분석
-              <br>
-              기획 전략<br>
-              온라인몰
-            </p>
-          </div>
-        </div>
-        <div class="about_contact">
-          <a href="/contact">문의하기</a>
-        </div>
-      </section>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script>
-        AOS.init();
-
-        var swiper = new Swiper(".mySwiper", {
-          speed: 500,
-          direction: "vertical",
-          slidesPerView: 1,
-          spaceBetween: 10,
-          mousewheel: true,
-          pagination: {
-            clickable: true
-          },
-          watchOverflow: true,
-          on: {
-            slideChange: function () {
-              setTimeout(function () {
-                swiper.params.touchReleaseOnEdges = false;
-                swiper.params.mousewheel.releaseOnEdges = false;
-              });
-            },
-            reachEnd: function () {
-              setTimeout(function () {
-                swiper.params.touchReleaseOnEdges = true;
-                swiper.params.mousewheel.releaseOnEdges = true;
-              }, 500);
-            },
-            reachBeginning: function () {
-              setTimeout(function () {
-                swiper.params.touchReleaseOnEdges = false;
-                swiper.params.mousewheel.releaseOnEdges = false;
-              }, 500);
-            }
-          }
-        });
-      </script>
-
-    </html>
+  </html>
