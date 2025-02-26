@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="925house"/>
-    <meta http-equiv="static" "imagetoolbar" content="no">
+    <meta http-equiv="imagetoolbar" content="no">
     <meta http-equiv="Cache-Control" content="No-Cache">
     <meta http-equiv="Pragma" content="No-Cache">
     <meta name="format-detection" content="telephone=no"/>
@@ -21,14 +21,14 @@
     <meta property="og:title" content="925house"/>
     <meta property="og:description" content="925house"/>
     <meta property="og:image" content="img/"/>
-    <meta property="og:url" content="URL"/>
+    <meta property="og:url" content="https://925house.co.kr/"/>
 
     <meta property="twitter:card" content="summary"/>
     <meta property="twitter:site" content="925house"/>
     <meta property="twitter:title" content="925house"/>
     <meta property="twitter:description" content="925house"/>
     <meta property="twitter:image" content="img/"/>
-    <meta property="twitter:url" content="URL"/>
+    <meta property="twitter:url" content="https://925house.co.kr/"/>
 
     <title>925house</title>
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}"/>
@@ -60,7 +60,6 @@
     <script defer="defer" src="{% static "js/loader.js" %}"></script>
     <script defer="defer" src="{% static "js/main.js" %}"></script>
     <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
-    <script defer="defer" src="{% static "js/portfolio.js" %}"></script>
 
   </head>
 
@@ -78,10 +77,10 @@
         <li>
           <a href="/about">About</a>
         </li>
-        <li>
+        <li class="active-menu">
           <a href="/service">Service</a>
         </li>
-        <li class="active-menu">
+        <li>
           <a href="/portfolio">Portfolio</a>
         </li>
         <li>
@@ -89,8 +88,102 @@
         </li>
       </ul>
     </section>
-    {% include "portfolio-fix.html" %}
-    <!-- matter -->
+    <section class="service">
+      <div class="inner">
+        <div class="service_title">
+          <p>Our Service</p>
+          <p>Design & Marketing Studio</p>
+        </div>
+        <div class="service_descript">
+          <p>:</p>
+          <p>
+            925house는 단순한 디자인이 아닌 체계적인 브랜딩 구축 시스템을 통해 차별화 된 브랜딩을 완성합니다. 기본 바탕이 되는 심미적 요소부터 마케팅까지 A to Z 서비스를 제공하여 통일감 있는 브랜딩으로 퀄리티를 보장합니다.
+          </p>
+        </div>
+        <div class="service_section">
+          <div class="service_box">
+            <div class="service_img">
+              <img src="{% static 'img/service_img1.png' %}" alt="925house">
+              <div class="service_txt service_img1">DESIGN</div>
+            </div>
+            <div class="service_text">
+              <p>디자인</p>
+              <p>
+                다양한 분야에서 목적에 맞는 디자인을 완성합니다. 시각적인 모든 요소들을 디자인하며 여러가지 형식의 디자인 작업물을 제작합니다.
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="service_box">
+            <div class="service_img">
+              <div class="service_txt service_img2">Marketing</div>
+              <img src="{% static 'img/service_img2.png' %}" alt="MARKETING">
+            </div>
+            <div class="service_text">
+              <p>마케팅</p>
+              <p>
+                고객과 브랜드를 연결하는데 중점을 두고 철저히 분석하며, 감동과 공감을 주는 창의적인 콘텐츠를 통해 소통하는 마케팅을 추구합니다.
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="service_box">
+            <div class="service_img">
+              <img src="{% static 'img/service_img3.png' %}" alt="WEB&APP">
+              <div class="service_txt service_img3">Wep&App</div>
+            </div>
+            <div class="service_text">
+              <p>웹 / 앱</p>
+              <p>
+                혁신적인 웹 디자인과 개발 서비스를 제공하며, 업무 생산성 향상을 위한 스마트 관리 솔루션을 개발하고 운영합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service_section2">
+          <div class="box">
+            <div class="box-liner"></div>
+            <p>Branding</p>
+            <p>브랜딩<br>
+              네이밍<br>
+              슬로건<br>
+              CI / BI<br>
+              카피라이팅</p>
+          </div>
+          <div class="box">
+            <div class="box-liner"></div>
+            <p>Design</p>
+            <p>
+              그래픽 디자인<br>
+              명함 디자인<br>
+              패키지 디자인<br>
+              인쇄 디자인<br>
+              카탈로그 / 리플렛 디자인<br>
+              영상 디자인<br>
+              웹 디자인</p>
+          </div>
+          <div class="box">
+            <div class="box-liner"></div>
+            <p>Marketing</p>
+            <p>
+              디지털 마케팅<br>
+              SNS 광고<br>
+              브랜드 블로그<br>
+              내부 서비스 강화 / 관리</p>
+          </div>
+          <div class="box">
+            <div class="box-liner"></div>
+            <p>Web&APP</p>
+            <p>
+              웹 / 앱 개발
+              <br>사용자 경험 분석<br>
+              기획 전략
+              <br>온라인몰</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="footer">
       <div class="inner">
         <div class="footer_logo">
@@ -116,8 +209,6 @@
         <div class="footer_copy">COPYRIGHT© 925house.ALL RIGHTS RESERVED</div>
       </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
     <script>
       AOS.init();
       const rangeSlider = document.getElementById('myRange');
@@ -127,6 +218,5 @@
         }
       });
     </script>
-  </body>
 
-</html>
+  </html>

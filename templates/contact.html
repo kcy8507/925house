@@ -76,7 +76,7 @@
           <a href="/about">About</a>
         </li>
         <li>
-          <a href="/portfolio">Service</a>
+          <a href="/service">Service</a>
         </li>
         <li>
           <a href="/portfolio">Portfolio</a>
@@ -165,7 +165,7 @@
         <div class="footer_email">
           <p>Build house</p>
           <div class="email_process">
-            <img class="emailstart" src="{% static "img/footermail.png" %}" alt="이메일">
+            <input type="range" value="0" id="myRange">
             <img class="emailend" src="{% static "img/footermailbox.png" %}" alt="이메일">
           </div>
         </div>
@@ -174,7 +174,15 @@
       </div>
     </section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script></script>
+    <script>
+      AOS.init();
+      const rangeSlider = document.getElementById('myRange');
+      rangeSlider.addEventListener('input', function () {
+        if (this.value == 100) {
+          window.location.href = "/contact";
+        }
+      });
+    </script>
   </body>
 
 </html>
