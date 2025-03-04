@@ -32,7 +32,7 @@ def contact(request):
 def portfolio(request):
     portfolios = Portfolio.objects.all()
     serializer = PortfolioSerializer(portfolios, many=True)
-    return render(request, "portfolio.html", {"portfolio": serializer.data})
+    return render(request, "portfolio.html", {"portfolios": serializer.data})
 
 def portfolio_detail(request, id):
     portfolio = Portfolio.objects.get(id=id)

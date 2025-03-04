@@ -42,6 +42,7 @@ class PortfolioSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "image",
+            "thumb",
             "created",
         ]
 

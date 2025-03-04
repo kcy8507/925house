@@ -60,7 +60,9 @@
     <script defer="defer" src="{% static "js/loader.js" %}"></script>
     <script defer="defer" src="{% static "js/main.js" %}"></script>
     <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
-    <script defer="defer" src="{% static "js/portfolio.js" %}"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   </head>
 
@@ -89,7 +91,19 @@
         </li>
       </ul>
     </section>
-    {% include "portfolio-fix.html" %}
+    <section class="portfolio" id="portfolio">
+      <div class="inner">
+        <div class="portfolio_wrap">
+          {% for portfolio in portfolios %}
+            <div class="work_wrap" data-aos="fade-up" data-aos-duration="1500">
+              <a href="#">
+                <img class="work1" src="{{ portfolio.thumb }}" alt="작업"></a>
+              <p>{{ portfolio.name }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
     <!-- matter -->
     <section class="footer">
       <div class="inner">
