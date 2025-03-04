@@ -6,7 +6,9 @@ from mango.serializers import RequestSerializer, PortfolioSerializer
 
 
 def index(request):
-    return render(request, "index.html")
+    portfolios = Portfolio.objects.all().order_by("-id")
+    serializer = PortfolioSerializer(portfolios, many=True)
+    return render(request, "index.html", {"portfolios": serializer.data})
 
 def about(request):
     return render(request, "about.html")
@@ -30,7 +32,7 @@ def contact(request):
 #     return render(request, "contact05.html")
 
 def portfolio(request):
-    portfolios = Portfolio.objects.all()
+    portfolios = Portfolio.objects.all().order_by("-id")
     serializer = PortfolioSerializer(portfolios, many=True)
     return render(request, "portfolio.html", {"portfolios": serializer.data})
 
