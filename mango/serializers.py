@@ -5,26 +5,16 @@ from mango.mail import EmailMultiAlternatives
 
 
 class RequestSerializer(serializers.ModelSerializer):
-    # applicant_count = serializers.SerializerMethodField(read_only=True)
-    service = serializers.ListField(
-        child=serializers.ChoiceField(choices=Request.need_to_services)
-    )
-    request = serializers.ListField(
-        child=serializers.ChoiceField(choices=Request.need_to_requests)
-    )
-
     class Meta:
         model = Request
         fields = [
-            "service",
-            "company_name",
+            "business",
+            "industry",
             "manager_name",
             "phone",
             "email",
-            "request",
-            "started",
-            "ended",
             "budget",
+            "needs",
         ]
     
     def create(self, validated_data):

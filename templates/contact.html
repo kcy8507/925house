@@ -57,7 +57,10 @@
     <script defer="defer" src="{% static "js/loader.js" %}"></script>
     <script defer="defer" src="{% static "js/main.js" %}"></script>
     <script src="{% static "js/jquery.smooth-scroll.js" %}"></script>
-    <script defer="defer" src="{% static "js/portfolio.js" %}"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   </head>
 
@@ -108,7 +111,7 @@
             <p class="contact_input-descript">프로젝트 의뢰 및 문의는 아래 양식을 작성하여 접수해주세요.<br>
               검토 후 남겨주신 연락처로 회신드리겠습니다.</p>
             <div class="input-box">
-              <input type="text" name="" id="business" placeholder="회사명">
+              <input type="text" name="" id="business" placeholder="회사명 *">
             </div>
             <div class="input-box">
               <input type="text" name="" id="industry" placeholder="업종">
@@ -120,10 +123,10 @@
               <input type="num" name="" id="num" placeholder="연락처">
             </div>
             <div class="input-box">
-              <input type="email" name="" id="email" placeholder="E-mail">
+              <input type="email" name="" id="email" placeholder="E-mail *">
             </div>
             <div class="input-box">
-              <input type="text" name="" id="price" placeholder="프로젝트 예산">
+              <input type="text" name="" id="price" placeholder="프로젝트 예산 *">
             </div>
             <div class="textarea-box">
               <textarea name="projectNeeds" id="projectNeeds" placeholder="문의사항"></textarea>
@@ -143,7 +146,7 @@
           </div>
 
           <div class="contact_submit">
-            <button type="submit">문의하기</button>
+            <button type="submit" onclick="subscription()">문의하기</button>
           </div>
         </div>
       </div>
@@ -173,7 +176,6 @@
         <div class="footer_copy">COPYRIGHT© 925house.ALL RIGHTS RESERVED</div>
       </div>
     </section>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       AOS.init();
       const rangeSlider = document.getElementById('myRange');
@@ -182,6 +184,68 @@
           window.location.href = "/contact";
         }
       });
+
+      const subscription = async () => {
+        var business = document.getElementById("business").value;
+        var industry = document.getElementById("industry").value;
+        var name = document.getElementById("name").value;
+        var num = document.getElementById("num").value;
+        var email = document.getElementById("email").value;
+        var price = document.getElementById("price").value;
+        var projectNeeds = document.getElementById("projectNeeds").value;
+        var privacy = document.getElementById("privacy");
+
+        if (!privacy.checked) {
+          alert("개인정보수집 동의는 필수입니다.");
+          return false;
+        };
+        console.log(industry, name, num, email)
+
+        if (!business) {
+          alert("회사명 입력은 필수입니다.");
+          return false;
+        };
+        if (!email) {
+          alert("E-mail 입력은 필수입니다.");
+          return false;
+        };
+        if (!price) {
+          alert("프로젝트 예산 입력은 필수입니다.");
+          return false;
+        };
+
+        const formData = new FormData();
+
+        formData.append("business", business);
+        formData.append("industry", industry);
+        formData.append("manager_name", name);
+        formData.append("phone", num);
+        formData.append("email", email);
+        formData.append("budget", price);
+        formData.append("needs", projectNeeds);
+        try {
+          let res = await axios({
+            url: `${location.origin}/request/`,
+            method: "POST",
+            headers: {
+              "X-CSRFToken": "{{csrf_token}}",
+              "Accept": "application/json",
+              "Content-Type": "multipart/form-data"
+            },
+            data: formData
+          });
+          alert("문의 감사합니다.\n확인 후 답변드리겠습니다.");
+          window.location.href = "/contact";
+        } catch (e) {
+          let res_data = e.response.data
+
+          if (res_data["non_field_errors"]) {
+            alert(res_data["non_field_errors"][0])
+            return
+          };
+        };
+        // window.location.reload();
+      };
     </script>
   </body>
 

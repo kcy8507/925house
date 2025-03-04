@@ -3,15 +3,14 @@ from mango.models import Request, Portfolio
 
 
 class RequestAdmin(admin.ModelAdmin):
-    list_filter = ["service"]
-    # list_display = [
-    #     "",
-    #     "",
-    #     "",
-    #     "",
-    #     "",
-    #     "",
-    # ]
+    # list_filter = ["service"]
+    list_display = [
+        "business",
+        "industry",
+        "email",
+        "budget",
+        "created",
+    ]
     
     # def get_service_display(self, obj):
     #     return obj.get_service_display()
