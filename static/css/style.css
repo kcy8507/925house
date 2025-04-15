@@ -4,7 +4,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
 @font-face {
   font-family: "KoPubWorld";
-  src: url("/static/fonts/KoPubWorld-Batang_Pro-Bold.otf") format("opentype");
+  src: url("/static/fonts/KoPubWorld-Batang_Pro-Medium.otf") format("opentype");
   font-weight: normal;
 }
 /*
@@ -283,6 +283,7 @@ input:focus {
 }
 
 .main_about {
+  font-size: 24px;
   margin-top: 48px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 200;
@@ -349,7 +350,7 @@ input:focus {
 .work_wrap {
   width: calc(50% - 50px);
   height: 100%;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 .work_wrap a {
   display: flex;
@@ -882,6 +883,48 @@ textarea {
   background-color: #8b9aa7;
 }
 
+.portfoliodetail_wrap {
+  padding: 185px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portfoliodetail_wrap p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 51px;
+  text-align: left;
+}
+.portfoliodetail_wrap img {
+  margin-bottom: 85px;
+  width: 100%;
+}
+.portfoliodetail_wrap .work_wrap {
+  width: 100%;
+}
+
+.portfoliodetail_btn {
+  width: 160px;
+  height: 52px;
+  border: 1px solid #141414;
+  border-radius: 60px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner_port {
+  max-width: 1340px;
+  padding: 0 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 992px) {
   .logo {
     height: 60px;
@@ -1176,12 +1219,14 @@ textarea {
   }
   .footer_email {
     margin-top: 25px;
+    width: 100%;
   }
   .footer_email p {
     font-size: 14px;
   }
   .email_process {
     margin-top: 10px;
+    width: 80px;
   }
   .email_process img {
     height: 12px;
@@ -1366,5 +1411,20 @@ textarea {
     width: 12px; /* 이미지의 width에 맞게 설정 */
     height: 10px; /* 이미지의 height에 맞게 설정 */
     margin-top: 0;
+  }
+  .portfoliodetail_wrap {
+    padding: 0px 0;
+  }
+  .portfoliodetail_wrap p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .portfoliodetail_wrap img {
+    margin-bottom: 15px;
+  }
+  .portfoliodetail_btn {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

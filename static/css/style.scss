@@ -3,7 +3,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
 @font-face {
   font-family: "KoPubWorld";
-  src: url("/static/fonts/KoPubWorld-Batang_Pro-Bold.otf") format("opentype");
+  src: url("/static/fonts/KoPubWorld-Batang_Pro-Medium.otf") format("opentype");
   font-weight: normal;
 }
 /*
@@ -285,6 +285,7 @@ input:focus {
   padding: 0 30px;
 }
 .main_about {
+  font-size: 24px;
   margin-top: 48px;
   font-family: $main__font-family;
   font-weight: 200;
@@ -346,7 +347,7 @@ input:focus {
 .work_wrap {
   width: calc(100% / 2 - 50px);
   height: 100%;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   a {
     display: flex;
     width: 100%;
@@ -844,6 +845,45 @@ textarea {
   /* 파이어폭스 */
   background-color: #8b9aa7;
 }
+.portfoliodetail_wrap {
+  padding: 185px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 51px;
+    text-align: left;
+  }
+  img {
+    margin-bottom: 85px;
+    width: 100%;
+  }
+  .work_wrap {
+    width: 100%;
+  }
+}
+.portfoliodetail_btn {
+  width: 160px;
+  height: 52px;
+  border: 1px solid #141414;
+  border-radius: 60px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner_port {
+  max-width: 1340px;
+  padding: 0 30px;
+  width: 100%;
+  margin: 0 auto;
+}
 @media screen and (max-width: 992px) {
   .logo {
     height: 60px;
@@ -1144,12 +1184,14 @@ textarea {
   }
   .footer_email {
     margin-top: 25px;
+    width: 100%;
   }
   .footer_email p {
     font-size: 14px;
   }
   .email_process {
     margin-top: 10px;
+    width: 80px;
     img {
       height: 12px;
     }
@@ -1336,5 +1378,20 @@ textarea {
     width: 12px; /* 이미지의 width에 맞게 설정 */
     height: 10px; /* 이미지의 height에 맞게 설정 */
     margin-top: 0;
+  }
+  .portfoliodetail_wrap {
+    padding: 0px 0;
+  }
+  .portfoliodetail_wrap p {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .portfoliodetail_wrap img {
+    margin-bottom: 15px;
+  }
+  .portfoliodetail_btn {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
   }
 }

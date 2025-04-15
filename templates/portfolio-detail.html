@@ -65,43 +65,77 @@
   </head>
 
   <body>
-
     <div id="loader">
       <!-- <i class='bx bx-loader-circle bx-spin'></i> -->
       <img src="{% static "img/loadingg.gif" %}" alt="다음페이지">
     </div>
     <section class="header">
+      <div class="header__wrap">
+        <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/service">Service</a>
+        </li>
+        <li>
+          <a href="/portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </section>
+    <div class="portfolio">
+      <div class="inner_port">
+        <div class="portfoliodetail_wrap">
+          <div class="work_wrap" data-aos="fade-up" data-aos-duration="1500">
+            <p>Wedding Ticket</p>
+            <img class="pf_img" src="{% static "img/pf_img01.png" %}" alt="포폴 이미지">
+            <img class="pf_img" src="{% static "img/pf_img02.png" %}" alt="포폴 이미지">
+            <img class="pf_img" src="{% static "img/pf_img03.png" %}" alt="포폴 이미지">
+          </div>
+          <a href="/portfolio" class="portfoliodetail_btn">목록으로</a>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
       <div class="inner">
-        <div class="header__wrap">
-          <a href="/"><img class="logo" src="{% static "img/logo.png" %}" alt="로고"></a>
-          <ul class="menu">
-            <li>
-              <a href="/about">ABOUT</a>
+        <div class="footer_logo">
+          <img class="footer_logoimg" src="{% static "img/footerlogo.png" %}" alt="푸터로고">
+          <ul>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              925house.official @gmail.com
             </li>
-            <li>
-              <a href="/portfolio">PORTFOLIO</a>
-            </li>
-            <li>
-              <a href="/contact">CONTACT</a>
-            </li>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              000.000.0000</li>
+            <li><img class="footerarrow" src="{% static "img/footerarrow.png" %}" alt="목록">
+              @925house</li>
           </ul>
         </div>
-      </div>
-    </section>
-    <section class="portfolio">
-      <div class="inner">
-        <div class="portfolio_wrap">
-          <div class="work_wrap" data-aos="fade-up" data-aos-duration="1500">
-            <p>수정해주세욥</p>
+        <div class="footer_email">
+          <p>Build house</p>
+          <div class="email_process">
+            <input type="range" value="0" id="myRange">
+            <img class="emailend" src="{% static "img/footermailbox.png" %}" alt="이메일">
           </div>
         </div>
+        <div class="footer_bg"></div>
+        <div class="footer_copy">COPYRIGHT© 925house.ALL RIGHTS RESERVED</div>
       </div>
     </section>
-    <!-- matter -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
     <script>
       AOS.init();
+      const rangeSlider = document.getElementById('myRange');
+      rangeSlider.addEventListener('input', function () {
+        if (this.value == 100) {
+          window.location.href = "/contact";
+        }
+      });
     </script>
   </body>
 
