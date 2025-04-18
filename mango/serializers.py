@@ -1,8 +1,23 @@
 from rest_framework import serializers
 
-from mango.models import Request, Portfolio
+from mango.models import Request, Portfolio, Image
 from mango.mail import EmailMultiAlternatives
 
+
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ["image"]
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        image = {
+            "url": representation.pop("image"),
+            "size": instance.image.size,
+            "name": instance.image.name,
+        }
+        representation["image"] = image
+        return representation
 
 class RequestSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,22 +51,48 @@ class RequestSerializer(serializers.ModelSerializer):
     #     return super().validate(attrs)
 
 class PortfolioSerializer(serializers.ModelSerializer):
+    files = serializers.ListField(
+        child=serializers.FileField(
+            write_only=True,
+            required=False,
+            allow_null=True,
+        ),
+        write_only=True,
+        required=False,
+        allow_null=True,
+    )
+    image = ImageSerializer(many=True, required=False)
     class Meta:
         model = Portfolio
         fields = [
             "id",
             "name",
+            "files",
             "image",
             "thumb",
             "created",
         ]
 
-    def to_representation(self, instance):
-        representation = super().to_representation(instance)
-        image = {
-            "url": representation.pop("image"),
-            "size": instance.image.size,
-            "name": instance.image.name,
-        }
-        representation["image"] = image
-        return representation
+    # def to_representation(self, instance):
+    #     representation = super().to_representation(instance)
+    #     image = {
+    #         "url": representation.pop("image"),
+    #         "size": instance.image.size,
+    #         "name": instance.image.name,
+    #     }
+    #     representation["image"] = image
+    #     return representation
+
+    def create(self, validated_data):
+        files = validated_data.pop("files", [])
+        instance = Portfolio.objects.create(**validated_data)
+
+        images = []
+        pic = ["png", "jpg", "jpeg"]
+        for file in files:
+            if file.name.split(".")[-1].lower() in pic:
+                images.append(Image(image=file, board_id=instance.id))
+            else:
+                raise serializers.ValidationError("이미지 파일이 아닙니다.")
+        Image.objects.bulk_create(images)
+        return instance

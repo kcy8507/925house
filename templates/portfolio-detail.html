@@ -92,10 +92,10 @@
       <div class="inner_port">
         <div class="portfoliodetail_wrap">
           <div class="work_wrap" data-aos="fade-up" data-aos-duration="1500">
-            <p>Wedding Ticket</p>
-            <img class="pf_img" src="{% static "img/pf_img01.png" %}" alt="포폴 이미지">
-            <img class="pf_img" src="{% static "img/pf_img02.png" %}" alt="포폴 이미지">
-            <img class="pf_img" src="{% static "img/pf_img03.png" %}" alt="포폴 이미지">
+            <p>{{ portfolio.name }}</p>
+            {% for pimg in portfolio.image %}
+              <img class="pf_img" src="{{ pimg.image.url }}" alt="포폴 이미지">
+            {% endfor %}
           </div>
           <a href="/portfolio" class="portfoliodetail_btn">목록으로</a>
         </div>

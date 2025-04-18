@@ -1,6 +1,11 @@
 from django.contrib import admin
 from mango.models import Request, Portfolio
 
+class ImageInline(admin.StackedInline):
+    model = Image
+    form = ImageInlineForm
+    formset = ImageInlineFormSet
+    extra = 1
 
 class RequestAdmin(admin.ModelAdmin):
     # list_filter = ["service"]
@@ -23,6 +28,7 @@ class RequestAdmin(admin.ModelAdmin):
 
 class PortfolioAdmin(admin.ModelAdmin):
     list_display = ["name", "created"]
+    inlines = [ImageInline]
 
 
 admin.site.register(Request, RequestAdmin)
