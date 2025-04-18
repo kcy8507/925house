@@ -1,5 +1,29 @@
+from django import forms
 from django.contrib import admin
-from mango.models import Request, Portfolio
+from mango.models import Request, Portfolio, Image
+from django.forms.models import BaseInlineFormSet
+
+
+class ImageInlineFormSet(BaseInlineFormSet):
+    def save_new(self, form, commit=True):
+        files = form.files.getlist("image")
+        instances = []
+        for f in files:
+            instance = Image(portfolio=form.cleaned_data["portfolio"], image=f)
+            if commit:
+                instance.save()
+            instances.append(instance)
+        return instances
+
+class ImageInlineForm(forms.ModelForm):
+    image = forms.FileField(
+        widget=forms.ClearableFileInput(attrs={"multiple": True}),
+        required=False,
+    )
+
+    class Meta:
+        model = Image
+        fields = ["image"]
 
 class ImageInline(admin.StackedInline):
     model = Image
