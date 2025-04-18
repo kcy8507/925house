@@ -17,7 +17,7 @@ class ImageInlineFormSet(BaseInlineFormSet):
 
 class ImageInlineForm(forms.ModelForm):
     image = forms.FileField(
-        widget=forms.ClearableFileInput(attrs={"multiple": True}),
+        widget=forms.FileInput(attrs={"multiple": True}),
         required=False,
     )
 
